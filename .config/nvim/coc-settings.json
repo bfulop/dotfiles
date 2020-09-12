@@ -1,0 +1,7 @@
+{
+  "eslint.packageManager": "yarn",
+  "prettier.singleQuote": true,
+  "prettier.eslintIntegration": true,
+  "diagnostic.errorSign": "✖︎",
+  "diagnostic.warningSign": "▲"
+}
