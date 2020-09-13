@@ -34,13 +34,14 @@ set shortmess+=c
 " show number of search results
 set shortmess-=S
 
-let $PATH .= ':/Users/balintfulop/.nodenv/versions/14.5.0/bin/'
+let $PATH .= ':/Users/balintfulop/.nodenv/versions/14.8.0/bin/'
 
 let g:ale_disable_lsp = 1
 let g:ale_fixers = {
 \  'javascript': ['prettier'],
 \}
 let g:ale_completion_enabled = 0
+let g:ale_javascript_prettier_use_global = 1
 let g:ale_sign_error = '!'
 let g:ale_sign_warning = '◆'
 
