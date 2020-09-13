@@ -1,0 +1,5 @@
+[time]
+disabled = false
+format = "[ %T ]"
+utc_time_offset = "local"
+time_range = "10:00:00-19:00:00"
