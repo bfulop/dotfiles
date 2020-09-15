@@ -58,7 +58,6 @@ call plug#begin('~/config/.nvim/plugged')
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-lua/telescope.nvim'
   Plug 'sgur/vim-editorconfig'
-  " Plug 'wincent/vcs-jump'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-obsession'
   Plug 'tpope/vim-eunuch'
@@ -66,6 +65,7 @@ call plug#begin('~/config/.nvim/plugged')
   Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
   Plug 'haya14busa/vim-keeppad'
   Plug 'jesseleite/vim-noh'
+  Plug 'norcalli/nvim-colorizer.lua'
   Plug 'tmsvg/pear-tree'
   Plug 'justinmk/vim-dirvish'
   Plug 'machakann/vim-highlightedyank'
@@ -184,6 +184,21 @@ require'nvim-treesitter.configs'.setup {
       },
     },
   },
+}
+
+-- Attach to certain Filetypes, add special configuration for `html`
+-- Use `background` for everything else.
+require 'colorizer'.setup {
+  css = {
+    css = true;
+  };
+  scss = {
+   css = true;
+  };
+  'javascript';
+  html = {
+    mode = 'foreground';
+  }
 }
 EOF
 
