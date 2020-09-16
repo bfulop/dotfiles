@@ -34,7 +34,7 @@ set shortmess+=c
 " show number of search results
 set shortmess-=S
 
-let $PATH .= ':/Users/balintfulop/.nodenv/versions/14.8.0/bin/'
+let $PATH .= ':/Users/balintfulop/.nodenv/versions/14.10.1/bin/'
 
 let g:ale_disable_lsp = 1
 let g:ale_fixers = {
@@ -51,7 +51,7 @@ call plug#begin('~/config/.nvim/plugged')
   Plug 'nvim-lua/diagnostic-nvim'
   Plug 'steelsojka/completion-buffers'
   Plug 'nvim-treesitter/nvim-treesitter'
-  Plug 'dense-analysis/ale'
+  " Plug 'dense-analysis/ale'
   Plug 'lambdalisue/fern.vim'
   Plug 'lambdalisue/fern-git-status.vim'
   Plug 'nvim-lua/popup.nvim'
