@@ -44,6 +44,8 @@ let g:ale_completion_enabled = 0
 let g:ale_javascript_prettier_use_global = 1
 let g:ale_sign_error = '!'
 let g:ale_sign_warning = '◆'
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_delay = 200
 
 call plug#begin('~/config/.nvim/plugged')
   Plug 'neovim/nvim-lspconfig'
@@ -51,7 +53,8 @@ call plug#begin('~/config/.nvim/plugged')
   Plug 'nvim-lua/diagnostic-nvim'
   Plug 'steelsojka/completion-buffers'
   Plug 'nvim-treesitter/nvim-treesitter'
-  " Plug 'dense-analysis/ale'
+  Plug 'dense-analysis/ale'
+  Plug 'mhartington/formatter.nvim'
   Plug 'lambdalisue/fern.vim'
   Plug 'lambdalisue/fern-git-status.vim'
   Plug 'nvim-lua/popup.nvim'
@@ -200,6 +203,17 @@ require 'colorizer'.setup {
     mode = 'foreground';
   }
 }
+require('format').setup({
+  javascript = {
+      prettier = function()
+        return {
+          exe = "prettier",
+          args = {"--stdin-filepath", vim.api.nvim_buf_get_name(0), '--single-quote'},
+          stdin = true
+        }
+      end
+  },
+})
 EOF
 
 " Neovim LSP features
