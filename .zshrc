@@ -95,6 +95,9 @@ fi
 
 export EDITOR=$HOME/install/neovim/nvim-osx64/bin/nvim
 
+path+=('/Users/balintfulop/.gem/ruby/2.7.0/bin')
+export PATH
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 

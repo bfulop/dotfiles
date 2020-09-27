@@ -45,7 +45,7 @@ let g:ale_javascript_prettier_use_global = 1
 let g:ale_sign_error = '!'
 let g:ale_sign_warning = '◆'
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_delay = 200
+let g:ale_lint_delay = 2000
 
 call plug#begin('~/config/.nvim/plugged')
   Plug 'neovim/nvim-lspconfig'
@@ -65,6 +65,7 @@ call plug#begin('~/config/.nvim/plugged')
   Plug 'tpope/vim-obsession'
   Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
   Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
   Plug 'haya14busa/vim-keeppad'
   Plug 'jesseleite/vim-noh'
