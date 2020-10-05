@@ -53,6 +53,8 @@ call plug#begin('~/config/.nvim/plugged')
   Plug 'nvim-lua/diagnostic-nvim'
   Plug 'steelsojka/completion-buffers'
   Plug 'nvim-treesitter/nvim-treesitter'
+  Plug 'nvim-treesitter/nvim-treesitter-refactor'
+  Plug 'nvim-treesitter/nvim-treesitter-textobjects'
   Plug 'dense-analysis/ale'
   Plug 'mhartington/formatter.nvim'
   Plug 'lambdalisue/fern.vim'
@@ -60,6 +62,7 @@ call plug#begin('~/config/.nvim/plugged')
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-lua/telescope.nvim'
+  Plug 'wfxr/minimap.vim'
   Plug 'sgur/vim-editorconfig'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-obsession'
@@ -135,7 +138,7 @@ require'nvim-treesitter.configs'.setup {
     smart_rename = {
       enable = true,
       keymaps = {
-        smart_rename = "grr",
+        smart_rename = "<leader>nr",
       },
     },
     navigation = {
