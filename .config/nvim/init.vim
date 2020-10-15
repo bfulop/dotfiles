@@ -34,7 +34,10 @@ set shortmess+=c
 " show number of search results
 set shortmess-=S
 
-let $PATH .= ':/Users/balintfulop/.nodenv/versions/14.10.1/bin/'
+let $PATH .= ':/Users/balintfulop/.nodenv/versions/14.13.1/bin/'
+
+if !exists('g:vscode')
+let g:minimap_auto_start = 0
 
 let g:ale_disable_lsp = 1
 let g:ale_fixers = {
@@ -46,16 +49,21 @@ let g:ale_sign_error = '!'
 let g:ale_sign_warning = '◆'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_delay = 2000
+endif
 
 call plug#begin('~/config/.nvim/plugged')
+if !exists('g:vscode')
+  Plug 'aca/completion-tabnine', { 'do': './install.sh' }
   Plug 'neovim/nvim-lspconfig'
+  Plug 'vim-utils/vim-troll-stopper'
   Plug 'nvim-lua/completion-nvim'
   Plug 'nvim-lua/diagnostic-nvim'
   Plug 'steelsojka/completion-buffers'
   Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'nvim-treesitter/nvim-treesitter-refactor'
   Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-  Plug 'dense-analysis/ale'
+  Plug 'nvim-treesitter/completion-treesitter'
+  " Plug 'dense-analysis/ale'
   Plug 'mhartington/formatter.nvim'
   Plug 'lambdalisue/fern.vim'
   Plug 'lambdalisue/fern-git-status.vim'
@@ -75,18 +83,13 @@ call plug#begin('~/config/.nvim/plugged')
   Plug 'norcalli/nvim-colorizer.lua'
   Plug 'tmsvg/pear-tree'
   Plug 'justinmk/vim-dirvish'
-  Plug 'machakann/vim-highlightedyank'
-  Plug 'wellle/targets.vim'
-  Plug 'tpope/vim-unimpaired'
-  Plug 'tpope/vim-projectionist'
-  " Plug 'sheerun/vim-polyglot'
   Plug 'prettier/vim-prettier', { 'do': 'npm install',  'branch': 'release/0.x'  }
   Plug 'plasticboy/vim-markdown'
   Plug 'elzr/vim-json'
+  " Plug 'sheerun/vim-polyglot'
   " Plug 'reedes/vim-pencil'
   " Plug 'tpope/vim-commentary'
   Plug 'tomtom/tcomment_vim'
-  Plug 'machakann/vim-sandwich'
   " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   " Plug 'junegunn/fzf.vim'
   Plug 'junegunn/limelight.vim'
@@ -101,8 +104,15 @@ call plug#begin('~/config/.nvim/plugged')
   Plug 'psliwka/vim-smoothie'
   " Plug 'akiyosi/gonvim-fuzzy'
   " Plug 'metakirby5/codi.vim'
+  Plug 'machakann/vim-highlightedyank'
+endif
+  Plug 'wellle/targets.vim'
+  Plug 'tpope/vim-unimpaired'
+  Plug 'tpope/vim-projectionist'
+  Plug 'machakann/vim-sandwich'
 call plug#end()
 
+if !exists('g:vscode')
 lua <<EOF
 local nvim_lsp = require'nvim_lsp'
 
@@ -138,7 +148,7 @@ require'nvim-treesitter.configs'.setup {
     smart_rename = {
       enable = true,
       keymaps = {
-        smart_rename = "<leader>nr",
+        smart_rename = "<leader>rn",
       },
     },
     navigation = {
@@ -226,7 +236,9 @@ require('format').setup({
   },
 })
 EOF
+endif
 
+if !exists('g:vscode')
 " Neovim LSP features
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
@@ -240,7 +252,7 @@ nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 
 " telescope plugin
 nnoremap <Leader>p :lua require'telescope.builtin'.git_files{}<CR>
-nnoremap ar <cmd>lua require'telescope.builtin'.lsp_document_symbols{ shorten_path = true }<CR>
+" nnoremap ar <cmd>lua require'telescope.builtin'.lsp_document_symbols{ shorten_path = true }<CR>
 nnoremap <silent> gw <cmd>lua require'telescope.builtin'.lsp_workspace_symbols{}<CR>
 nnoremap <Leader>v :lua require'telescope.builtin'.live_grep{}<CR>
 nnoremap <silent> gr <cmd>lua require'telescope.builtin'.lsp_references{ shorten_path = true }<CR>
@@ -349,11 +361,18 @@ let g:diagnostic_enable_underline = 1
 
 " nvim-lua/completion settings START
 
-let g:completion_chain_complete_list = [
-    \{'complete_items': ['lsp', 'buffers']},
-    \{'mode': '<c-p>'},
-    \{'mode': '<c-n>'}
-\]
+let g:completion_chain_complete_list = {
+      \'default' : {
+      \       'default' : [
+      \           {'complete_items' : ['tabnine', 'lsp', 'ts', 'buffers',]},
+      \           {'mode': '<c-p>'},
+      \           {'mode': '<c-n>'}
+      \       ],
+      \},
+      \}
+let g:completion_trigger_keyword_length = 2
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+let g:completion_sorting = "length"
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -414,3 +433,4 @@ let g:vim_markdown_conceal_code_start = 0
 let g:vim_markdown_conceal_code_end = 0
 " let g:pencil#conceallevel = 2
 
+endif

@@ -59,6 +59,7 @@ cleanup = true
 [commands]
 "Update Neovim HEAD" = "brew reinstall neovim"
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
+"Nodenv" = "nodenv update"
 
 #[brew]
 #greedy_cask = true
