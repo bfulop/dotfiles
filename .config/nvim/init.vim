@@ -24,6 +24,10 @@ set noshowmode
 " set laststatus=2
 " parcel hot module reload (?):
 set backupcopy=yes
+set history=300
+set undolevels=300
+set autoindent
+set noswapfile
 
 " Maintain undo history between sessions
 set undofile 
@@ -34,7 +38,7 @@ set shortmess+=c
 " show number of search results
 set shortmess-=S
 
-let $PATH .= ':/Users/balintfulop/.nodenv/versions/14.13.1/bin/'
+let $PATH .= ':/Users/balintfulop/.nodenv/versions/15.0.1/bin/'
 
 if !exists('g:vscode')
 let g:minimap_auto_start = 0
@@ -249,6 +253,7 @@ nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
 nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
+nnoremap <silent> ca    <cmd>lua vim.lsp.buf.code_action()<CR>
 
 " telescope plugin
 nnoremap <Leader>p :lua require'telescope.builtin'.git_files{}<CR>
@@ -358,6 +363,7 @@ endfunction
 let g:diagnostic_enable_virtual_text = 1
 let g:diagnostic_auto_popup_while_jump = 1
 let g:diagnostic_enable_underline = 1
+autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
 
 " nvim-lua/completion settings START
 
