@@ -52,7 +52,11 @@ let g:ale_javascript_prettier_use_global = 1
 let g:ale_sign_error = '!'
 let g:ale_sign_warning = '◆'
 let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 0
 let g:ale_lint_delay = 2000
+nnoremap <Leader>al    <cmd>ALELint<CR>
 endif
 
 call plug#begin('~/config/.nvim/plugged')
@@ -67,7 +71,7 @@ if !exists('g:vscode')
   Plug 'nvim-treesitter/nvim-treesitter-refactor'
   Plug 'nvim-treesitter/nvim-treesitter-textobjects'
   Plug 'nvim-treesitter/completion-treesitter'
-  " Plug 'dense-analysis/ale'
+  Plug 'dense-analysis/ale'
   Plug 'mhartington/formatter.nvim'
   Plug 'lambdalisue/fern.vim'
   Plug 'lambdalisue/fern-git-status.vim'
@@ -253,7 +257,8 @@ nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
 nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
-nnoremap <silent> ca    <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <Leader>ca    <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <silent> cd    <cmd>lua vim.lsp.util.show_line_diagnostics()<CR>
 
 " telescope plugin
 nnoremap <Leader>p :lua require'telescope.builtin'.git_files{}<CR>
@@ -363,7 +368,6 @@ endfunction
 let g:diagnostic_enable_virtual_text = 1
 let g:diagnostic_auto_popup_while_jump = 1
 let g:diagnostic_enable_underline = 1
-autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
 
 " nvim-lua/completion settings START
 
