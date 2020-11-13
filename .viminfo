@@ -5,7 +5,7 @@
 |1,4
 
 # Value of 'encoding' when this file was written
-*encoding=latin1
+*encoding=utf-8
 
 
 # hlsearch on (H) or off (h):
@@ -21,7 +21,15 @@ $Term
 
 # Command Line History (newest to oldest):
 :q
-|2,0,1602424695,,"q"
+|2,0,1605114407,,"q"
+:bd
+|2,0,1605114404,,"bd"
+:e versions/15.1.0/lib/node_modules/.hooks
+|2,0,1605114400,,"e versions/15.1.0/lib/node_modules/.hooks"
+:e /Users/balintfulop/.nodenv/versions/15.1.0/etc/npmrc
+|2,0,1605114289,,"e /Users/balintfulop/.nodenv/versions/15.1.0/etc/npmrc"
+:e /Users/balintfulop/.npmrc
+|2,0,1605114276,,"e /Users/balintfulop/.npmrc"
 :w
 |2,0,1602424694,,"w"
 :qall
@@ -132,20 +140,20 @@ $Term
 |3,1,36,0,1,0,1602424612," "
 
 # File marks:
-'0  1045  13  ~/.config/kitty/kitty.conf
-|4,48,1045,13,1602424695,"~/.config/kitty/kitty.conf"
-'1  31  2  ~/.config/kitty/kitty.conf
-|4,49,31,2,1602424428,"~/.config/kitty/kitty.conf"
-'2  31  2  ~/.config/kitty/kitty.conf
-|4,50,31,2,1602424428,"~/.config/kitty/kitty.conf"
-'3  31  22  ~/.config/kitty/kitty.conf
-|4,51,31,22,1602424398,"~/.config/kitty/kitty.conf"
-'4  31  22  ~/.config/kitty/kitty.conf
-|4,52,31,22,1602424398,"~/.config/kitty/kitty.conf"
-'5  9  31  ~/.config/kitty/kitty.conf
-|4,53,9,31,1602424307,"~/.config/kitty/kitty.conf"
-'6  9  31  ~/.config/kitty/kitty.conf
-|4,54,9,31,1602424307,"~/.config/kitty/kitty.conf"
+'0  1  0  ~/.npm/_logs/2020-11-11T16_55_09_386Z-debug.log
+|4,48,1,0,1605114407,"~/.npm/_logs/2020-11-11T16_55_09_386Z-debug.log"
+'1  1  0  ~/.npm/_logs/2020-11-11T16_43_02_803Z-debug.log
+|4,49,1,0,1605113701,"~/.npm/_logs/2020-11-11T16_43_02_803Z-debug.log"
+'2  1045  13  ~/.config/kitty/kitty.conf
+|4,50,1045,13,1602424695,"~/.config/kitty/kitty.conf"
+'3  31  2  ~/.config/kitty/kitty.conf
+|4,51,31,2,1602424428,"~/.config/kitty/kitty.conf"
+'4  31  2  ~/.config/kitty/kitty.conf
+|4,52,31,2,1602424428,"~/.config/kitty/kitty.conf"
+'5  31  22  ~/.config/kitty/kitty.conf
+|4,53,31,22,1602424398,"~/.config/kitty/kitty.conf"
+'6  31  22  ~/.config/kitty/kitty.conf
+|4,54,31,22,1602424398,"~/.config/kitty/kitty.conf"
 '7  9  31  ~/.config/kitty/kitty.conf
 |4,55,9,31,1602424307,"~/.config/kitty/kitty.conf"
 '8  9  31  ~/.config/kitty/kitty.conf
@@ -154,20 +162,80 @@ $Term
 |4,57,9,31,1602424307,"~/.config/kitty/kitty.conf"
 
 # Jumplist (newest first):
+-'  1  0  ~/.npm/_logs/2020-11-11T16_55_09_386Z-debug.log
+|4,39,1,0,1605114407,"~/.npm/_logs/2020-11-11T16_55_09_386Z-debug.log"
+-'  1  0  versions/15.1.0/lib/node_modules/.hooks
+|4,39,1,0,1605114404,"versions/15.1.0/lib/node_modules/.hooks"
+-'  1  0  ~/.nodenv/versions/15.1.0/etc/npmrc
+|4,39,1,0,1605114291,"~/.nodenv/versions/15.1.0/etc/npmrc"
+-'  1  0  ~/.npmrc
+|4,39,1,0,1605114280,"~/.npmrc"
+-'  1  0  ~/.npm/_logs/2020-11-11T16_43_02_803Z-debug.log
+|4,39,1,0,1605113701,"~/.npm/_logs/2020-11-11T16_43_02_803Z-debug.log"
+-'  1  0  ~/.npm/_logs/2020-11-11T16_43_02_803Z-debug.log
+|4,39,1,0,1605113701,"~/.npm/_logs/2020-11-11T16_43_02_803Z-debug.log"
+-'  1045  13  ~/.config/kitty/kitty.conf
+|4,39,1045,13,1602424695,"~/.config/kitty/kitty.conf"
+-'  1045  13  ~/.config/kitty/kitty.conf
+|4,39,1045,13,1602424695,"~/.config/kitty/kitty.conf"
+-'  1045  13  ~/.config/kitty/kitty.conf
+|4,39,1045,13,1602424695,"~/.config/kitty/kitty.conf"
 -'  1045  13  ~/.config/kitty/kitty.conf
 |4,39,1045,13,1602424695,"~/.config/kitty/kitty.conf"
 -'  244  0  ~/.config/kitty/kitty.conf
 |4,39,244,0,1602424596,"~/.config/kitty/kitty.conf"
+-'  244  0  ~/.config/kitty/kitty.conf
+|4,39,244,0,1602424596,"~/.config/kitty/kitty.conf"
+-'  244  0  ~/.config/kitty/kitty.conf
+|4,39,244,0,1602424596,"~/.config/kitty/kitty.conf"
+-'  244  0  ~/.config/kitty/kitty.conf
+|4,39,244,0,1602424596,"~/.config/kitty/kitty.conf"
+-'  1  0  ~/.config/kitty/kitty.conf
+|4,39,1,0,1602424439,"~/.config/kitty/kitty.conf"
+-'  1  0  ~/.config/kitty/kitty.conf
+|4,39,1,0,1602424439,"~/.config/kitty/kitty.conf"
+-'  1  0  ~/.config/kitty/kitty.conf
+|4,39,1,0,1602424439,"~/.config/kitty/kitty.conf"
 -'  1  0  ~/.config/kitty/kitty.conf
 |4,39,1,0,1602424439,"~/.config/kitty/kitty.conf"
 -'  31  2  ~/.config/kitty/kitty.conf
 |4,39,31,2,1602424428,"~/.config/kitty/kitty.conf"
 -'  31  2  ~/.config/kitty/kitty.conf
 |4,39,31,2,1602424428,"~/.config/kitty/kitty.conf"
+-'  31  2  ~/.config/kitty/kitty.conf
+|4,39,31,2,1602424428,"~/.config/kitty/kitty.conf"
+-'  31  2  ~/.config/kitty/kitty.conf
+|4,39,31,2,1602424428,"~/.config/kitty/kitty.conf"
+-'  31  2  ~/.config/kitty/kitty.conf
+|4,39,31,2,1602424428,"~/.config/kitty/kitty.conf"
+-'  31  2  ~/.config/kitty/kitty.conf
+|4,39,31,2,1602424428,"~/.config/kitty/kitty.conf"
+-'  31  2  ~/.config/kitty/kitty.conf
+|4,39,31,2,1602424428,"~/.config/kitty/kitty.conf"
+-'  31  2  ~/.config/kitty/kitty.conf
+|4,39,31,2,1602424428,"~/.config/kitty/kitty.conf"
+-'  1  0  ~/.config/kitty/kitty.conf
+|4,39,1,0,1602424406,"~/.config/kitty/kitty.conf"
+-'  1  0  ~/.config/kitty/kitty.conf
+|4,39,1,0,1602424406,"~/.config/kitty/kitty.conf"
+-'  1  0  ~/.config/kitty/kitty.conf
+|4,39,1,0,1602424406,"~/.config/kitty/kitty.conf"
 -'  1  0  ~/.config/kitty/kitty.conf
 |4,39,1,0,1602424406,"~/.config/kitty/kitty.conf"
 -'  31  22  ~/.config/kitty/kitty.conf
 |4,39,31,22,1602424398,"~/.config/kitty/kitty.conf"
+-'  31  22  ~/.config/kitty/kitty.conf
+|4,39,31,22,1602424398,"~/.config/kitty/kitty.conf"
+-'  31  22  ~/.config/kitty/kitty.conf
+|4,39,31,22,1602424398,"~/.config/kitty/kitty.conf"
+-'  31  22  ~/.config/kitty/kitty.conf
+|4,39,31,22,1602424398,"~/.config/kitty/kitty.conf"
+-'  1  0  ~/.config/kitty/kitty.conf
+|4,39,1,0,1602424359,"~/.config/kitty/kitty.conf"
+-'  1  0  ~/.config/kitty/kitty.conf
+|4,39,1,0,1602424359,"~/.config/kitty/kitty.conf"
+-'  1  0  ~/.config/kitty/kitty.conf
+|4,39,1,0,1602424359,"~/.config/kitty/kitty.conf"
 -'  1  0  ~/.config/kitty/kitty.conf
 |4,39,1,0,1602424359,"~/.config/kitty/kitty.conf"
 -'  9  31  ~/.config/kitty/kitty.conf
@@ -178,6 +246,36 @@ $Term
 |4,39,9,31,1602424307,"~/.config/kitty/kitty.conf"
 -'  9  31  ~/.config/kitty/kitty.conf
 |4,39,9,31,1602424307,"~/.config/kitty/kitty.conf"
+-'  9  31  ~/.config/kitty/kitty.conf
+|4,39,9,31,1602424307,"~/.config/kitty/kitty.conf"
+-'  9  31  ~/.config/kitty/kitty.conf
+|4,39,9,31,1602424307,"~/.config/kitty/kitty.conf"
+-'  9  31  ~/.config/kitty/kitty.conf
+|4,39,9,31,1602424307,"~/.config/kitty/kitty.conf"
+-'  9  31  ~/.config/kitty/kitty.conf
+|4,39,9,31,1602424307,"~/.config/kitty/kitty.conf"
+-'  9  31  ~/.config/kitty/kitty.conf
+|4,39,9,31,1602424307,"~/.config/kitty/kitty.conf"
+-'  9  31  ~/.config/kitty/kitty.conf
+|4,39,9,31,1602424307,"~/.config/kitty/kitty.conf"
+-'  9  31  ~/.config/kitty/kitty.conf
+|4,39,9,31,1602424307,"~/.config/kitty/kitty.conf"
+-'  9  31  ~/.config/kitty/kitty.conf
+|4,39,9,31,1602424307,"~/.config/kitty/kitty.conf"
+-'  9  31  ~/.config/kitty/kitty.conf
+|4,39,9,31,1602424307,"~/.config/kitty/kitty.conf"
+-'  9  31  ~/.config/kitty/kitty.conf
+|4,39,9,31,1602424307,"~/.config/kitty/kitty.conf"
+-'  9  31  ~/.config/kitty/kitty.conf
+|4,39,9,31,1602424307,"~/.config/kitty/kitty.conf"
+-'  9  31  ~/.config/kitty/kitty.conf
+|4,39,9,31,1602424307,"~/.config/kitty/kitty.conf"
+-'  1  0  ~/.config/kitty/kitty.conf
+|4,39,1,0,1602424179,"~/.config/kitty/kitty.conf"
+-'  1  0  ~/.config/kitty/kitty.conf
+|4,39,1,0,1602424179,"~/.config/kitty/kitty.conf"
+-'  1  0  ~/.config/kitty/kitty.conf
+|4,39,1,0,1602424179,"~/.config/kitty/kitty.conf"
 -'  1  0  ~/.config/kitty/kitty.conf
 |4,39,1,0,1602424179,"~/.config/kitty/kitty.conf"
 -'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
@@ -212,150 +310,80 @@ $Term
 |4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
 -'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
 |4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601484772,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601484772,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601484772,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601484772,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601484772,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601484772,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601484772,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601484772,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601484772,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601484772,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601484772,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601484772,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601484772,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601484772,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601484772,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601484772,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601288083,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601288083,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601288083,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601288083,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601288083,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601288083,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601288083,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601288083,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601288083,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601288083,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601288083,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601288083,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601288083,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601288083,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601288083,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,0,1601288083,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  24  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,24,1601287993,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  24  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,24,1601287993,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  24  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,24,1601287993,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  24  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,24,1601287993,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  24  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,24,1601287993,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  24  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,24,1601287993,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  24  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,24,1601287993,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  24  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,24,1601287993,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  24  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,24,1601287993,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  24  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,24,1601287993,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  24  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,24,1601287993,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  24  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,24,1601287993,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  24  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,24,1601287993,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  24  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,24,1601287993,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  24  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,24,1601287993,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  1  24  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,1,24,1601287993,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
--'  2  0  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
-|4,39,2,0,1601287870,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
+-'  307  2929  ~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js
+|4,39,307,2929,1601532877,"~/Work/tag/tmp/1fcf69e4416dc7384848f9660712efab.js"
 
 # History of marks within files (newest to oldest):
+
+> ~/.npm/_logs/2020-11-11T16_55_09_386Z-debug.log
+	*	1605114404	0
+	"	1	0
+
+> versions/15.1.0/lib/node_modules/.hooks
+	*	1605114400	0
+	"	1	0
+
+> ~/.nodenv/versions/15.1.0/etc/npmrc
+	*	1605114289	0
+	"	1	0
+
+> ~/.npmrc
+	*	1605114276	0
+	"	1	0
+
+> ~/.npm/_logs/2020-11-11T16_43_02_803Z-debug.log
+	*	1605113029	0
+	"	1	0
 
 > ~/.config/kitty/kitty.conf
 	*	1602424694	0
