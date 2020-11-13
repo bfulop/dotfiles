@@ -45,7 +45,9 @@ let g:minimap_auto_start = 0
 
 let g:ale_disable_lsp = 1
 let g:ale_fixers = {
-\  'javascript': ['prettier'],
+\  'javascript': ['prettier', 'eslint'],
+\  'typescript': ['prettier', 'eslint'],
+\  'typescriptreact': ['prettier', 'eslint'],
 \}
 let g:ale_completion_enabled = 0
 let g:ale_javascript_prettier_use_global = 1
@@ -56,7 +58,7 @@ let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 0
 let g:ale_lint_delay = 2000
-nnoremap <Leader>al    <cmd>ALELint<CR>
+nnoremap <Leader>ll    <cmd>ALELint<CR>
 endif
 
 call plug#begin('~/config/.nvim/plugged')
@@ -65,14 +67,13 @@ if !exists('g:vscode')
   Plug 'neovim/nvim-lspconfig'
   Plug 'vim-utils/vim-troll-stopper'
   Plug 'nvim-lua/completion-nvim'
-  Plug 'nvim-lua/diagnostic-nvim'
   Plug 'steelsojka/completion-buffers'
   Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'nvim-treesitter/nvim-treesitter-refactor'
   Plug 'nvim-treesitter/nvim-treesitter-textobjects'
   Plug 'nvim-treesitter/completion-treesitter'
   Plug 'dense-analysis/ale'
-  Plug 'mhartington/formatter.nvim'
+  Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
   Plug 'lambdalisue/fern.vim'
   Plug 'lambdalisue/fern-git-status.vim'
   Plug 'nvim-lua/popup.nvim'
@@ -84,7 +85,7 @@ if !exists('g:vscode')
   Plug 'tpope/vim-obsession'
   Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-fugitive'
-  Plug 'airblade/vim-gitgutter'
+  " Plug 'airblade/vim-gitgutter'
   Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
   Plug 'haya14busa/vim-keeppad'
   Plug 'jesseleite/vim-noh'
@@ -125,9 +126,27 @@ lua <<EOF
 local nvim_lsp = require'nvim_lsp'
 
 local on_attach = function()
-  require'diagnostic'.on_attach()
   require'completion'.on_attach()
 end
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    underline = true,
+    -- This will disable virtual text, like doing:
+    -- let g:diagnostic_enable_virtual_text = 0
+    virtual_text = true,
+
+    -- This is similar to:
+    -- let g:diagnostic_show_sign = 1
+    -- To configure sign display,
+    --  see: ":help vim.lsp.diagnostic.set_signs()"
+    signs = true,
+
+    -- This is similar to:
+    -- "let g:diagnostic_insert_delay = 1"
+    update_in_insert = false,
+  }
+)
 
 nvim_lsp.tsserver.setup {
     cmd = { "typescript-language-server", "--stdio" },
@@ -227,22 +246,14 @@ require 'colorizer'.setup {
   scss = {
    css = true;
   };
+  vim = {
+   vim = true;
+  };
   'javascript';
   html = {
     mode = 'foreground';
   }
 }
-require('format').setup({
-  javascript = {
-      prettier = function()
-        return {
-          exe = "prettier",
-          args = {"--stdin-filepath", vim.api.nvim_buf_get_name(0), '--single-quote'},
-          stdin = true
-        }
-      end
-  },
-})
 EOF
 endif
 
@@ -257,8 +268,10 @@ nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
 nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
-nnoremap <Leader>ca    <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <Leader>ca     <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent> cd    <cmd>lua vim.lsp.util.show_line_diagnostics()<CR>
+nnoremap <leader>dn     <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <leader>dp     <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 
 " telescope plugin
 nnoremap <Leader>p :lua require'telescope.builtin'.git_files{}<CR>
@@ -266,6 +279,7 @@ nnoremap <Leader>p :lua require'telescope.builtin'.git_files{}<CR>
 nnoremap <silent> gw <cmd>lua require'telescope.builtin'.lsp_workspace_symbols{}<CR>
 nnoremap <Leader>v :lua require'telescope.builtin'.live_grep{}<CR>
 nnoremap <silent> gr <cmd>lua require'telescope.builtin'.lsp_references{ shorten_path = true }<CR>
+nnoremap <Leader>b <cmd>lua require'telescope.builtin'.buffers{ shorten_path = true }<CR>
 
 " Window action remaps
 nnoremap <C-J> <C-W><C-J>
@@ -283,6 +297,11 @@ nmap <Leader>a <Plug>(dirvish_up)
 noremap <silent> <Leader>d :Fern . -drawer -width=35 -toggle<CR>
 noremap <silent> <Leader>f :Fern . -drawer -reveal=% -width=35<CR>
 noremap <silent> <Leader>. :Fern %:h -drawer -width=35<CR>
+
+nnoremap <Plug>(fern-close-drawer) :<C-u>FernDo close -drawer -stay<CR>
+nmap <buffer><silent> <Plug>(fern-action-open-and-close)
+      \ <Plug>(fern-action-open)
+      \ <Plug>(fern-close-drawer)
 
 function! FernInit() abort
   nmap <buffer><expr>
@@ -362,12 +381,6 @@ function! LightlineFilename()
   endif
   return expand('%')
 endfunction
-
-" nvim-lua/diagnostic
-
-let g:diagnostic_enable_virtual_text = 1
-let g:diagnostic_auto_popup_while_jump = 1
-let g:diagnostic_enable_underline = 1
 
 " nvim-lua/completion settings START
 
