@@ -38,7 +38,7 @@ set shortmess+=c
 " show number of search results
 set shortmess-=S
 
-let $PATH .= ':/Users/balintfulop/.nodenv/versions/15.0.1/bin/'
+let $PATH .= ':/Users/balintfulop/.nodenv/versions/15.1.0/bin/'
 
 if !exists('g:vscode')
 let g:minimap_auto_start = 0
@@ -63,6 +63,7 @@ endif
 
 call plug#begin('~/config/.nvim/plugged')
 if !exists('g:vscode')
+  Plug 'natebosch/vim-lsc'
   Plug 'vim-utils/vim-troll-stopper'
   Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'nvim-treesitter/nvim-treesitter-refactor'
@@ -221,6 +222,28 @@ EOF
 endif
 
 if !exists('g:vscode')
+" VIM LSC Language Server Setup
+let g:lsc_server_commands = {
+ \  'javascript': {
+ \    'command': 'typescript-language-server --stdio',
+ \    'log_level': -1,
+ \    'suppress_stderr': v:true,
+ \  },
+ \ 'typescript': { 'command': 'typescript-language-server --stdio' }, 
+ \ 'typescript.tsx': { 'command': 'typescript-language-server --stdio' },
+ \ 'typescriptreact': { 'command': 'typescript-language-server --stdio' },
+ \}
+let g:lsc_auto_map = {
+ \  'defaults': v:true,
+ \  'GoToDefinition': 'gd',
+ \  'ShowHover': 'K',
+ \  'FindCodeActions': 'ga',
+ \  'Completion': 'omnifunc',
+ \}
+let g:lsc_enable_autocomplete  = v:true
+let g:lsc_enable_diagnostics   = v:true
+let g:lsc_reference_highlights = v:true
+
 " telescope plugin
 nnoremap <Leader>p :lua require'telescope.builtin'.git_files{}<CR>
 " nnoremap ar <cmd>lua require'telescope.builtin'.lsp_document_symbols{ shorten_path = true }<CR>
