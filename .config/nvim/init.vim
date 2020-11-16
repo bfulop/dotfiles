@@ -72,7 +72,7 @@ if !exists('g:vscode')
   Plug 'nvim-treesitter/nvim-treesitter-refactor'
   Plug 'nvim-treesitter/nvim-treesitter-textobjects'
   Plug 'nvim-treesitter/completion-treesitter'
-  Plug 'dense-analysis/ale'
+  " Plug 'dense-analysis/ale'
   Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
   Plug 'lambdalisue/fern.vim'
   Plug 'lambdalisue/fern-git-status.vim'
@@ -123,7 +123,7 @@ call plug#end()
 
 if !exists('g:vscode')
 lua <<EOF
-local nvim_lsp = require'nvim_lsp'
+local lspconfig = require'lspconfig'
 
 local on_attach = function()
   require'completion'.on_attach()
@@ -148,10 +148,10 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   }
 )
 
-nvim_lsp.tsserver.setup {
+lspconfig.tsserver.setup {
     cmd = { "typescript-language-server", "--stdio" },
     filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
-    root_dir = nvim_lsp.util.root_pattern("package.json", "tsconfig.json", ".git"),
+    root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git"),
     on_attach = on_attach
 }
 
@@ -249,7 +249,6 @@ require 'colorizer'.setup {
   vim = {
    vim = true;
   };
-  'javascript';
   html = {
     mode = 'foreground';
   }
@@ -268,10 +267,10 @@ nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
 nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
-nnoremap <Leader>ca     <cmd>lua vim.lsp.buf.code_action()<CR>
+" nnoremap <Leader>ca     <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent> cd    <cmd>lua vim.lsp.util.show_line_diagnostics()<CR>
 nnoremap <leader>dn     <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
-nnoremap <leader>dp     <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+" nnoremap <leader>dp     <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 
 " telescope plugin
 nnoremap <Leader>p :lua require'telescope.builtin'.git_files{}<CR>
@@ -387,15 +386,16 @@ endfunction
 let g:completion_chain_complete_list = {
       \'default' : {
       \       'default' : [
-      \           {'complete_items' : ['tabnine', 'lsp', 'ts', 'buffers',]},
+      \           {'complete_items' : ['tabnine', 'lsp', 'buffers',]},
       \           {'mode': '<c-p>'},
       \           {'mode': '<c-n>'}
       \       ],
       \},
       \}
-let g:completion_trigger_keyword_length = 2
-let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+let g:completion_trigger_keyword_length = 3
+let g:completion_matching_strategy_list = ['fuzzy', 'exact', 'substring']
 let g:completion_sorting = "length"
+let g:completion_enable_auto_hover = 0
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
