@@ -63,11 +63,7 @@ endif
 
 call plug#begin('~/config/.nvim/plugged')
 if !exists('g:vscode')
-  Plug 'aca/completion-tabnine', { 'do': './install.sh' }
-  Plug 'neovim/nvim-lspconfig'
   Plug 'vim-utils/vim-troll-stopper'
-  Plug 'nvim-lua/completion-nvim'
-  Plug 'steelsojka/completion-buffers'
   Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'nvim-treesitter/nvim-treesitter-refactor'
   Plug 'nvim-treesitter/nvim-treesitter-textobjects'
@@ -123,38 +119,6 @@ call plug#end()
 
 if !exists('g:vscode')
 lua <<EOF
-local lspconfig = require'lspconfig'
-
-local on_attach = function()
-  require'completion'.on_attach()
-end
-
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    underline = true,
-    -- This will disable virtual text, like doing:
-    -- let g:diagnostic_enable_virtual_text = 0
-    virtual_text = true,
-
-    -- This is similar to:
-    -- let g:diagnostic_show_sign = 1
-    -- To configure sign display,
-    --  see: ":help vim.lsp.diagnostic.set_signs()"
-    signs = true,
-
-    -- This is similar to:
-    -- "let g:diagnostic_insert_delay = 1"
-    update_in_insert = false,
-  }
-)
-
-lspconfig.tsserver.setup {
-    cmd = { "typescript-language-server", "--stdio" },
-    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
-    root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git"),
-    on_attach = on_attach
-}
-
 require'nvim-treesitter.configs'.setup {
   ensure_insalled = "all",
   highlight = {
@@ -257,21 +221,6 @@ EOF
 endif
 
 if !exists('g:vscode')
-" Neovim LSP features
-nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
-nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
-nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
-" nnoremap <Leader>ca     <cmd>lua vim.lsp.buf.code_action()<CR>
-nnoremap <silent> cd    <cmd>lua vim.lsp.util.show_line_diagnostics()<CR>
-nnoremap <leader>dn     <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
-" nnoremap <leader>dp     <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-
 " telescope plugin
 nnoremap <Leader>p :lua require'telescope.builtin'.git_files{}<CR>
 " nnoremap ar <cmd>lua require'telescope.builtin'.lsp_document_symbols{ shorten_path = true }<CR>
