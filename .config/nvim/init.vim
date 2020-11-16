@@ -15,7 +15,7 @@ set inccommand=nosplit
 set termguicolors
 filetype plugin on
 syntax on
-set updatetime=200
+set updatetime=500
 
 set hidden
 set cmdheight=2
@@ -242,7 +242,7 @@ let g:lsc_auto_map = {
  \}
 let g:lsc_enable_autocomplete  = v:true
 let g:lsc_enable_diagnostics   = v:true
-let g:lsc_reference_highlights = v:true
+let g:lsc_reference_highlights = v:false
 
 " telescope plugin
 nnoremap <Leader>p :lua require'telescope.builtin'.git_files{}<CR>
@@ -251,6 +251,7 @@ nnoremap <silent> gw <cmd>lua require'telescope.builtin'.lsp_workspace_symbols{}
 nnoremap <Leader>v :lua require'telescope.builtin'.live_grep{}<CR>
 nnoremap <silent> gr <cmd>lua require'telescope.builtin'.lsp_references{ shorten_path = true }<CR>
 nnoremap <Leader>b <cmd>lua require'telescope.builtin'.buffers{ shorten_path = true }<CR>
+nnoremap <Leader>q <cmd>lua require'telescope.builtin'.quickfix{}<CR>
 
 " Window action remaps
 nnoremap <C-J> <C-W><C-J>
