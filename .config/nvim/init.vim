@@ -192,13 +192,6 @@ require'nvim-treesitter.configs'.setup {
         ["[]"] = "@class.outer",
       },
     },
-    lsp_interop = {
-      enable = true,
-      peek_definition_code = {
-        ["df"] = "@function.outer",
-        ["dF"] = "@class.outer",
-      },
-    },
   },
 }
 
@@ -225,13 +218,13 @@ if !exists('g:vscode')
 " VIM LSC Language Server Setup
 let g:lsc_server_commands = {
  \  'javascript': {
- \    'command': 'typescript-language-server --stdio',
+ \    'command': 'node /Users/balintfulop/Install/typescript-language-server/server/lib/cli.js --stdio',
  \    'log_level': -1,
  \    'suppress_stderr': v:true,
  \  },
- \ 'typescript': { 'command': 'typescript-language-server --stdio' }, 
- \ 'typescript.tsx': { 'command': 'typescript-language-server --stdio' },
- \ 'typescriptreact': { 'command': 'typescript-language-server --stdio' },
+ \ 'typescript': { 'command': 'node /Users/balintfulop/Install/typescript-language-server/server/lib/cli.js --stdio' }, 
+ \ 'typescript.tsx': { 'command': 'node /Users/balintfulop/Install/typescript-language-server/server/lib/cli.js --stdio' },
+ \ 'typescriptreact': { 'command': 'node /Users/balintfulop/Install/typescript-language-server/server/lib/cli.js --stdio' },
  \}
 let g:lsc_auto_map = {
  \  'defaults': v:true,
@@ -247,9 +240,9 @@ let g:lsc_reference_highlights = v:false
 " telescope plugin
 nnoremap <Leader>p :lua require'telescope.builtin'.git_files{}<CR>
 " nnoremap ar <cmd>lua require'telescope.builtin'.lsp_document_symbols{ shorten_path = true }<CR>
-nnoremap <silent> gw <cmd>lua require'telescope.builtin'.lsp_workspace_symbols{}<CR>
+" nnoremap <silent> gw <cmd>lua require'telescope.builtin'.lsp_workspace_symbols{}<CR>
 nnoremap <Leader>v :lua require'telescope.builtin'.live_grep{}<CR>
-nnoremap <silent> gr <cmd>lua require'telescope.builtin'.lsp_references{ shorten_path = true }<CR>
+" nnoremap <silent> gr <cmd>lua require'telescope.builtin'.lsp_references{ shorten_path = true }<CR>
 nnoremap <Leader>b <cmd>lua require'telescope.builtin'.buffers{ shorten_path = true }<CR>
 nnoremap <Leader>q <cmd>lua require'telescope.builtin'.quickfix{}<CR>
 
@@ -353,22 +346,6 @@ function! LightlineFilename()
   endif
   return expand('%')
 endfunction
-
-" nvim-lua/completion settings START
-
-let g:completion_chain_complete_list = {
-      \'default' : {
-      \       'default' : [
-      \           {'complete_items' : ['tabnine', 'lsp', 'buffers',]},
-      \           {'mode': '<c-p>'},
-      \           {'mode': '<c-n>'}
-      \       ],
-      \},
-      \}
-let g:completion_trigger_keyword_length = 3
-let g:completion_matching_strategy_list = ['fuzzy', 'exact', 'substring']
-let g:completion_sorting = "length"
-let g:completion_enable_auto_hover = 0
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
