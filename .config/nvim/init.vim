@@ -7,15 +7,14 @@ set tabstop=2
 set shiftwidth=2
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
-set foldlevelstart=6
-set foldnestmax=8
+set foldlevelstart=2
 set nocompatible
 set inccommand=nosplit
 " needed for limelight on Gui apps
 set termguicolors
 filetype plugin on
 syntax on
-set updatetime=500
+set updatetime=100
 
 set hidden
 set cmdheight=2
@@ -37,8 +36,10 @@ set undodir=~/Temp/undodir
 set shortmess+=c
 " show number of search results
 set shortmess-=S
+" vim-lsc avoid suppressing error messages from this plugin.
+set shortmess-=F
 
-let $PATH .= ':/Users/balintfulop/.nodenv/versions/15.1.0/bin/'
+let $PATH .= ':/Users/balintfulop/.nodenv/versions/15.3.0/bin/'
 
 if !exists('g:vscode')
 let g:minimap_auto_start = 0
@@ -121,7 +122,9 @@ call plug#end()
 if !exists('g:vscode')
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_insalled = "all",
+  indent = {
+    enable = true
+  },
   highlight = {
     enable = true
   },
@@ -217,11 +220,7 @@ endif
 if !exists('g:vscode')
 " VIM LSC Language Server Setup
 let g:lsc_server_commands = {
- \  'javascript': {
- \    'command': 'node /Users/balintfulop/Install/typescript-language-server/server/lib/cli.js --stdio',
- \    'log_level': -1,
- \    'suppress_stderr': v:true,
- \  },
+ \  'javascript': {'command': 'node /Users/balintfulop/Install/typescript-language-server/server/lib/cli.js --stdio' },
  \ 'typescript': { 'command': 'node /Users/balintfulop/Install/typescript-language-server/server/lib/cli.js --stdio' }, 
  \ 'typescript.tsx': { 'command': 'node /Users/balintfulop/Install/typescript-language-server/server/lib/cli.js --stdio' },
  \ 'typescriptreact': { 'command': 'node /Users/balintfulop/Install/typescript-language-server/server/lib/cli.js --stdio' },
@@ -236,6 +235,10 @@ let g:lsc_auto_map = {
 let g:lsc_enable_autocomplete  = v:true
 let g:lsc_enable_diagnostics   = v:true
 let g:lsc_reference_highlights = v:false
+let g:lsc_trace_level          = 'off'
+
+" Signature help mapping whilst in insert mode.
+inoremap <silent> <C-h> <C-o>:LSClientSignatureHelp<CR>
 
 " telescope plugin
 nnoremap <Leader>p :lua require'telescope.builtin'.git_files{}<CR>
