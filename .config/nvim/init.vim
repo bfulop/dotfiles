@@ -7,7 +7,7 @@ set tabstop=2
 set shiftwidth=2
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
-set foldlevelstart=2
+set foldlevelstart=3
 set nocompatible
 set inccommand=nosplit
 " needed for limelight on Gui apps
@@ -241,13 +241,14 @@ let g:lsc_trace_level          = 'off'
 inoremap <silent> <C-h> <C-o>:LSClientSignatureHelp<CR>
 
 " telescope plugin
-nnoremap <Leader>p :lua require'telescope.builtin'.git_files{}<CR>
+nnoremap <Leader>p :lua require'telescope.builtin'.find_files{}<CR>
 " nnoremap ar <cmd>lua require'telescope.builtin'.lsp_document_symbols{ shorten_path = true }<CR>
 " nnoremap <silent> gw <cmd>lua require'telescope.builtin'.lsp_workspace_symbols{}<CR>
 nnoremap <Leader>v :lua require'telescope.builtin'.live_grep{}<CR>
 " nnoremap <silent> gr <cmd>lua require'telescope.builtin'.lsp_references{ shorten_path = true }<CR>
 nnoremap <Leader>b <cmd>lua require'telescope.builtin'.buffers{ shorten_path = true }<CR>
 nnoremap <Leader>q <cmd>lua require'telescope.builtin'.quickfix{}<CR>
+nnoremap <Leader>ff <cmd>lua require'telescope.builtin'.help_tags{}<CR>
 
 " Window action remaps
 nnoremap <C-J> <C-W><C-J>

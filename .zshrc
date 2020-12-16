@@ -39,11 +39,15 @@ ZSH_THEME="amuse"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-DISABLE_AUTO_TITLE="false"
-# function precmd() {
-#   window_title="\033]0;${PWD}\007"
-#   echo -ne "$window_title"
-# }
+DISABLE_AUTO_TITLE="true"
+function precmd() {
+  print -Pn "\e]0;%n@%m: %~\a"
+}
+
+function set_win_title(){
+    print -Pn "\e]0;%2~\a"
+}
+precmd_functions+=(set_win_title)
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -93,7 +97,7 @@ else
   export EDITOR='nvim'
 fi
 
-export EDITOR=$HOME/install/neovim/nvim-osx64/bin/nvim
+export EDITOR=$HOME/Downloads/nvim-osx64/bin/nvim
 
 path+=('/Users/balintfulop/.gem/ruby/2.7.0/bin')
 export PATH
@@ -114,7 +118,7 @@ eval "$(nodenv init -)"
 
 # NEOVIM
 # export PATH="~/install/neovim/nvim-osx64/bin/"
-export PATH="$HOME/install/neovim/nvim-osx64/bin/nvim:$PATH"
+export PATH="$HOME/Downloads/nvim-osx64/bin/:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/Users/balintfulop/Library/Python/2.7/bin:$PATH"
 
