@@ -73,6 +73,7 @@ if !exists('g:vscode')
   " Plug 'dense-analysis/ale'
   Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
   Plug 'lambdalisue/fern.vim'
+  Plug 'mhartington/formatter.nvim'
   Plug 'lambdalisue/fern-git-status.vim'
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
@@ -214,8 +215,36 @@ require 'colorizer'.setup {
     mode = 'foreground';
   }
 }
+
+require('formatter').setup({
+  logging = false,
+  filetype = {
+    javascript = {
+        -- prettier
+       function()
+          return {
+            exe = "prettier",
+            args = {"--stdin-filepath", vim.api.nvim_buf_get_name(0), '--single-quote'},
+            stdin = true
+          }
+        end
+    },
+    typescript = {
+        -- prettier
+       function()
+          return {
+            exe = "prettier",
+            args = {"--stdin-filepath", vim.api.nvim_buf_get_name(0), '--single-quote'},
+            stdin = true
+          }
+        end
+    },
+  }
+})
 EOF
 endif
+
+nnoremap <silent> <leader>m :Format<CR>
 
 if !exists('g:vscode')
 " VIM LSC Language Server Setup
