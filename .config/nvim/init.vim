@@ -65,6 +65,7 @@ endif
 call plug#begin('~/config/.nvim/plugged')
 if !exists('g:vscode')
   Plug 'natebosch/vim-lsc'
+  Plug 'neovim/nvim-lspconfig'
   Plug 'vim-utils/vim-troll-stopper'
   Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'nvim-treesitter/nvim-treesitter-refactor'
@@ -122,6 +123,27 @@ call plug#end()
 
 if !exists('g:vscode')
 lua <<EOF
+
+local nvim_lsp = require "lspconfig"
+
+nvim_lsp.efm.setup {
+  default_config = {
+    cmd = {
+      "efm-langserver",
+      "-c",
+      [["$HOME/.config/efm-langserver/config.yaml"]]
+    }
+  },
+  filetypes = {
+    "javascript",
+    "javascriptreact",
+    "javascript.jsx",
+    "typescript",
+    "typescript.tsx",
+    "typescriptreact"
+  }
+}
+
 require'nvim-treesitter.configs'.setup {
   indent = {
     enable = true
@@ -244,7 +266,7 @@ require('formatter').setup({
 EOF
 endif
 
-nnoremap <silent> <leader>m :Format<CR>
+nnoremap <silent> <leader>f :Format<CR>
 
 if !exists('g:vscode')
 " VIM LSC Language Server Setup
