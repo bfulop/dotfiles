@@ -64,8 +64,8 @@ endif
 
 call plug#begin('~/config/.nvim/plugged')
 if !exists('g:vscode')
-  Plug 'natebosch/vim-lsc'
   Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/nvim-compe'
   Plug 'vim-utils/vim-troll-stopper'
   Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'nvim-treesitter/nvim-treesitter-refactor'
@@ -122,27 +122,12 @@ endif
 call plug#end()
 
 if !exists('g:vscode')
+  " Load Neovim Lua-based plugin configurations.
+if has('nvim')
+    lua require'lsp-config'
+    lua require'compe-config'
+endif
 lua <<EOF
-
-local nvim_lsp = require "lspconfig"
-
-nvim_lsp.efm.setup {
-  default_config = {
-    cmd = {
-      "efm-langserver",
-      "-c",
-      [["$HOME/.config/efm-langserver/config.yaml"]]
-    }
-  },
-  filetypes = {
-    "javascript",
-    "javascriptreact",
-    "javascript.jsx",
-    "typescript",
-    "typescript.tsx",
-    "typescriptreact"
-  }
-}
 
 require'nvim-treesitter.configs'.setup {
   indent = {
@@ -269,27 +254,6 @@ endif
 nnoremap <silent> <leader>f :Format<CR>
 
 if !exists('g:vscode')
-" VIM LSC Language Server Setup
-let g:lsc_server_commands = {
- \  'javascript': {'command': 'node /Users/balintfulop/Install/typescript-language-server/server/lib/cli.js --stdio' },
- \ 'typescript': { 'command': 'node /Users/balintfulop/Install/typescript-language-server/server/lib/cli.js --stdio' }, 
- \ 'typescript.tsx': { 'command': 'node /Users/balintfulop/Install/typescript-language-server/server/lib/cli.js --stdio' },
- \ 'typescriptreact': { 'command': 'node /Users/balintfulop/Install/typescript-language-server/server/lib/cli.js --stdio' },
- \}
-let g:lsc_auto_map = {
- \  'defaults': v:true,
- \  'GoToDefinition': 'gd',
- \  'ShowHover': 'K',
- \  'FindCodeActions': 'ga',
- \  'Completion': 'omnifunc',
- \}
-let g:lsc_enable_autocomplete  = v:true
-let g:lsc_enable_diagnostics   = v:true
-let g:lsc_reference_highlights = v:false
-let g:lsc_trace_level          = 'off'
-
-" Signature help mapping whilst in insert mode.
-inoremap <silent> <C-h> <C-o>:LSClientSignatureHelp<CR>
 
 " telescope plugin
 nnoremap <Leader>p :lua require'telescope.builtin'.find_files{}<CR>
