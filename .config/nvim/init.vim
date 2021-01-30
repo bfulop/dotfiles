@@ -39,7 +39,7 @@ set shortmess-=S
 " vim-lsc avoid suppressing error messages from this plugin.
 set shortmess-=F
 
-let $PATH .= ':/Users/balintfulop/.nodenv/versions/15.3.0/bin/'
+let $PATH .= ':/Users/balintfulop/.nodenv/versions/15.5.1/bin/'
 
 if !exists('g:vscode')
 let g:minimap_auto_start = 0
