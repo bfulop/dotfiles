@@ -1,27 +1,10 @@
 -- See:
 --  https://nathansmith.io/posts/neovim-lsp
 --  https://rishabhrd.github.io/jekyll/update/2020/09/19/nvim_lsp_config.html
+--  https://elianiva.me/post/my-nvim-lsp-setup
 --  https://neovim.io/doc/user/lsp.html
 
 local nvim_lsp = require'lspconfig'
-
-nvim_lsp.efm.setup {
-  default_config = {
-    cmd = {
-      "efm-langserver",
-      "-c",
-      [["$HOME/.config/efm-langserver/config.yaml"]]
-    }
-  },
-  filetypes = {
-    "javascript",
-    "javascriptreact",
-    "javascript.jsx",
-    "typescript",
-    "typescript.tsx",
-    "typescriptreact"
-  }
-}
 
 
 -- Custom diagnostic handler for the events and timer API (not yet available).
@@ -79,6 +62,13 @@ local lsp_on_attach = function(client)
   -- and timer API (not yet available).
   -- vim.cmd('autocmd BufWrite <buffer> lua DiagnosticTimer()')
 
+  -- Use incremental content ranges if the language server supports them. This
+  -- will be far more efficient than sending the full buffer for each
+  -- 'didChange' event (the default behaviour).
+  if client.config.flags then
+    client.config.flags.allow_incremental_sync = true
+  end
+
   -- Mappings.
   local opts = {noremap = true, silent = true}
   vim.api.nvim_buf_set_keymap(0, 'n', 'ga','<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
@@ -86,7 +76,7 @@ local lsp_on_attach = function(client)
   vim.api.nvim_buf_set_keymap(0, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
   vim.api.nvim_buf_set_keymap(0, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   vim.api.nvim_buf_set_keymap(0, 'n', 'gR','<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(0, 'i', '<c-h>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(0, 'i', '<c-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
   vim.api.nvim_buf_set_keymap(0, 'n', '<Space>=', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
   vim.api.nvim_buf_set_keymap(0, 'n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next({severity_limit = "Warning"})<CR>', opts)
   vim.api.nvim_buf_set_keymap(0, 'n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev({severity_limit = "Warning"})<CR>', opts)
@@ -137,8 +127,28 @@ end
 
 nvim_lsp.tsserver.setup {
   on_attach = lsp_on_attach,
-  flags = {allow_incremental_sync = true},
+  filetypes = { 'javascript', 'typescript', 'typescriptreact' },
+  cmd = {'node', '/Users/balintfulop/Install/typescript-language-server/server/lib/cli.js', '--stdio'};
   handlers = {
     ['textDocument/publishDiagnostics'] = diagnostic_handler
   }
 }
+
+nvim_lsp.efm.setup {
+  default_config = {
+    cmd = {
+      "efm-langserver",
+      "-c",
+      [["$HOME/.config/efm-langserver/config.yaml"]]
+    }
+  },
+  filetypes = {
+    "javascript",
+    "javascriptreact",
+    "javascript.jsx",
+    "typescript",
+    "typescript.tsx",
+    "typescriptreact"
+  }
+}
+
