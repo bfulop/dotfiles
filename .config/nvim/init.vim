@@ -42,8 +42,6 @@ set shortmess-=F
 let $PATH .= ':/Users/balintfulop/.nodenv/versions/15.5.1/bin/'
 
 if !exists('g:vscode')
-let g:minimap_auto_start = 0
-
 let g:ale_disable_lsp = 1
 let g:ale_fixers = {
 \  'javascript': ['prettier', 'eslint'],
@@ -79,7 +77,7 @@ if !exists('g:vscode')
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-lua/telescope.nvim'
-  Plug 'wfxr/minimap.vim'
+  Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
   Plug 'sgur/vim-editorconfig'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-obsession'
@@ -124,87 +122,15 @@ call plug#end()
 if !exists('g:vscode')
   " Load Neovim Lua-based plugin configurations.
 if has('nvim')
-    lua require'lsp-config'
-    lua require'compe-config'
+  lua require("init")
+    augroup ScrollbarInit
+      autocmd!
+      autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
+      autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
+      autocmd WinLeave,FocusLost             * silent! lua require('scrollbar').clear()
+    augroup end
 endif
 lua <<EOF
-
-require'nvim-treesitter.configs'.setup {
-  indent = {
-    enable = true
-  },
-  highlight = {
-    enable = true
-  },
-  incremental_selection = {
-    enable = true,
-    keymaps = {
-      init_selection = "gnn",
-      node_incremental = "grn",
-      scope_incremental = "grc",
-      node_decremental = "grm",
-    },
-  },
-  refactor = {
-    highlight_definitions = { enable = true },
-    highlight_current_scope = { enable = false },
-    smart_rename = {
-      enable = true,
-      keymaps = {
-        smart_rename = "<leader>rn",
-      },
-    },
-    navigation = {
-      enable = true,
-      keymaps = {
-        goto_definition = "gnd",
-        list_definitions = "gnD",
-        goto_next_usage = "<a-*>",
-        goto_previous_usage = "<a-#>",
-      },
-    },
-  },
-  textobjects = {
-    select = {
-      enable = true,
-      keymaps = {
-        -- You can use the capture groups defined in textobjects.scm
-        ["af"] = "@function.outer",
-        ["if"] = "@function.inner",
-        ["ac"] = "@class.outer",
-        ["ic"] = "@class.inner",
-      },
-    },
-    swap = {
-      enable = true,
-      swap_next = {
-        ["<leader>a"] = "@parameter.inner",
-      },
-      swap_previous = {
-        ["<leader>A"] = "@parameter.inner",
-      },
-    },
-    move = {
-      enable = true,
-      goto_next_start = {
-        ["]m"] = "@function.outer",
-        ["]]"] = "@class.outer",
-      },
-      goto_next_end = {
-        ["]M"] = "@function.outer",
-        ["]["] = "@class.outer",
-      },
-      goto_previous_start = {
-        ["[m"] = "@function.outer",
-        ["[["] = "@class.outer",
-      },
-      goto_previous_end = {
-        ["[M"] = "@function.outer",
-        ["[]"] = "@class.outer",
-      },
-    },
-  },
-}
 
 -- Attach to certain Filetypes, add special configuration for `html`
 -- Use `background` for everything else.
@@ -256,12 +182,9 @@ nnoremap <silent> <leader>f :Format<CR>
 if !exists('g:vscode')
 
 " telescope plugin
-nnoremap <Leader>p :lua require'telescope.builtin'.find_files{}<CR>
 " nnoremap ar <cmd>lua require'telescope.builtin'.lsp_document_symbols{ shorten_path = true }<CR>
 " nnoremap <silent> gw <cmd>lua require'telescope.builtin'.lsp_workspace_symbols{}<CR>
-nnoremap <Leader>v :lua require'telescope.builtin'.live_grep{}<CR>
 " nnoremap <silent> gr <cmd>lua require'telescope.builtin'.lsp_references{ shorten_path = true }<CR>
-nnoremap <Leader>b <cmd>lua require'telescope.builtin'.buffers{ shorten_path = true }<CR>
 nnoremap <Leader>q <cmd>lua require'telescope.builtin'.quickfix{}<CR>
 nnoremap <Leader>ff <cmd>lua require'telescope.builtin'.help_tags{}<CR>
 
