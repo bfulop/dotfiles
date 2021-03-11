@@ -4,6 +4,9 @@ if not tsconf then
    return
 end
 tsconf.setup {
+  ensure_installed = {
+    'bash', 'html', 'javascript', 'typescript', 'json', 'css', 'lua', 'yaml'
+  },
   indent = {
     enable = true
   },

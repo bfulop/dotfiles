@@ -56,18 +56,21 @@ vim.cmd('sign define LspDiagnosticsSignWarning text=✖')
 vim.cmd('sign define LspDiagnosticsSignInformation text=●')
 vim.cmd('sign define LspDiagnosticsSignHint text=●')
 
+-- Enable incremental synchronization if the language server supports it. This
+-- is more efficient than sending the full buffer for each edit (the default
+-- behaviour).
+local lsp_on_init = function(client)
+  client.config.flags = {}
+  if client.config.flags then
+    client.config.flags.allow_incremental_sync = true
+  end
+end
+
 -- On attach function.
 local lsp_on_attach = function(client)
   -- Update diagnostics when saving the current buffer to disk for the events
   -- and timer API (not yet available).
   -- vim.cmd('autocmd BufWrite <buffer> lua DiagnosticTimer()')
-
-  -- Use incremental content ranges if the language server supports them. This
-  -- will be far more efficient than sending the full buffer for each
-  -- 'didChange' event (the default behaviour).
-  if client.config.flags then
-    client.config.flags.allow_incremental_sync = true
-  end
 
   -- Mappings.
   local opts = {noremap = true, silent = true}
@@ -126,6 +129,7 @@ end
 -- }
 
 nvim_lsp.tsserver.setup {
+  on_init = lsp_on_init,
   on_attach = lsp_on_attach,
   filetypes = { 'javascript', 'typescript', 'typescriptreact' },
   cmd = {'node', '/Users/balintfulop/Install/typescript-language-server/server/lib/cli.js', '--stdio'};
