@@ -7,7 +7,7 @@ set tabstop=2
 set shiftwidth=2
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
-set foldlevelstart=3
+set foldlevelstart=8
 set nocompatible
 set inccommand=nosplit
 " needed for limelight on Gui apps
@@ -83,6 +83,7 @@ if !exists('g:vscode')
   Plug 'tpope/vim-obsession'
   Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-fugitive'
+  Plug 'andymass/vim-matchup'
   " Plug 'airblade/vim-gitgutter'
   Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
   Plug 'haya14busa/vim-keeppad'
