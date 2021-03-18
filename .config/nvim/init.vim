@@ -88,7 +88,6 @@ if !exists('g:vscode')
   Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
   Plug 'haya14busa/vim-keeppad'
   Plug 'jesseleite/vim-noh'
-  Plug 'norcalli/nvim-colorizer.lua'
   Plug 'tmsvg/pear-tree'
   Plug 'justinmk/vim-dirvish'
   Plug 'prettier/vim-prettier', { 'do': 'npm install',  'branch': 'release/0.x'  }
@@ -98,6 +97,7 @@ if !exists('g:vscode')
   " Plug 'reedes/vim-pencil'
   " Plug 'tpope/vim-commentary'
   Plug 'tomtom/tcomment_vim'
+  Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
   " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   " Plug 'junegunn/fzf.vim'
   Plug 'junegunn/limelight.vim'
@@ -132,24 +132,6 @@ if has('nvim')
     augroup end
 endif
 lua <<EOF
-
--- Attach to certain Filetypes, add special configuration for `html`
--- Use `background` for everything else.
-require 'colorizer'.setup {
-  css = {
-    css = true;
-  };
-  scss = {
-   css = true;
-  };
-  vim = {
-   vim = true;
-  };
-  html = {
-    mode = 'foreground';
-  }
-}
-
 require('formatter').setup({
   logging = false,
   filetype = {

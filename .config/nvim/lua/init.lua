@@ -13,7 +13,7 @@ require('_utils')
 --PLUGINS
 require('_compe-config')
 -- require('_quickscope')
--- require('_hexokinase')
+require('_hexokinase')
 require('_telescope')
 require('_treesitter')
 --require('_nvimtree')
