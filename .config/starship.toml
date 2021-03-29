@@ -5,6 +5,7 @@ utc_time_offset = "local"
 time_range = "10:00:00-19:00:00"
 
 [nodejs]
+command_timeout = 6000
 symbol = "⬢ "
 
 [character]
