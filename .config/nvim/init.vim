@@ -120,6 +120,18 @@ endif
   Plug 'machakann/vim-sandwich'
 call plug#end()
 
+" Disable sources that are not needed to improve startup time:
+" https://is.gd/4keyXX
+let g:loaded_compe_calc = 0
+let g:loaded_compe_emoji = 0
+let g:loaded_compe_nvim_lua = 0
+let g:loaded_compe_path = 0
+let g:loaded_compe_snippets_nvim = 0
+let g:loaded_compe_spell = 0
+let g:loaded_compe_tags = 0
+let g:loaded_compe_treesitter = 0
+
+
 if !exists('g:vscode')
   " Load Neovim Lua-based plugin configurations.
 if has('nvim')
@@ -324,8 +336,8 @@ let g:projectionist_heuristics = {
 " augroup END
 
 let g:vim_markdown_fenced_languages = ['JSON=json']
-set conceallevel=2
-au FileType markdown set conceallevel=2
+set conceallevel=0
+au FileType markdown set conceallevel=0
 let g:vim_markdown_json_frontmatter = 1
 let g:vim_markdown_conceal_code_start = 0
 let g:vim_markdown_conceal_code_end = 0

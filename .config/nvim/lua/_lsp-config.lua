@@ -120,6 +120,7 @@ end
 
 nvim_lsp.tsserver.setup {
   on_attach = lsp_on_attach,
+  flags = {debounce_did_change_notify = 300},
   filetypes = { 'javascript', 'typescript', 'typescriptreact' },
   cmd = {'node', '/Users/balintfulop/Install/typescript-language-server/server/lib/cli.js', '--stdio'};
   handlers = {
