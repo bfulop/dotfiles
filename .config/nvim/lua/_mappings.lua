@@ -29,3 +29,8 @@ utils.vnoremap(leader..'3', ":lua require'telescope.builtin'.symbols(require('te
 utils.nnoremap(leader..'2', ":lua require'telescope.builtin'.help_tags()<cr>")
 utils.vnoremap(leader..'2', ":lua require'telescope.builtin'.help_tags()<cr>")
 utils.noremap('',leader..'1', ":lua require'telescope.builtin'.builtin()<cr>")
+
+
+-- NEOSCROLL MAPPINGS
+utils.nnoremap('<C-y>', ":lua require('neoscroll').scroll(-3, false, 12)<cr>")
+utils.nnoremap('<C-e>', ":lua require('neoscroll').scroll(3, false, 12)<cr>")

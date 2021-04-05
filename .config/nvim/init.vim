@@ -78,7 +78,7 @@ if !exists('g:vscode')
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-lua/telescope.nvim'
   Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
-  Plug 'sgur/vim-editorconfig'
+  Plug 'editorconfig/editorconfig-vim'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-obsession'
   Plug 'tpope/vim-eunuch'
@@ -109,7 +109,7 @@ if !exists('g:vscode')
   Plug 'kyazdani42/blue-moon'
   " Plug 'vim-scripts/Sift'
   " Plug 'equalsraf/neovim-gui-shim'
-  Plug 'psliwka/vim-smoothie'
+  Plug 'karb94/neoscroll.nvim'
   " Plug 'akiyosi/gonvim-fuzzy'
   " Plug 'metakirby5/codi.vim'
   Plug 'machakann/vim-highlightedyank'
@@ -119,6 +119,10 @@ endif
   Plug 'tpope/vim-projectionist'
   Plug 'machakann/vim-sandwich'
 call plug#end()
+
+" Disable 'trim_trailing_whitespace' rule since it does not place nice with
+" snippet expansions.
+let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']
 
 " Disable sources that are not needed to improve startup time:
 " https://is.gd/4keyXX

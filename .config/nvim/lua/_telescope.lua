@@ -22,7 +22,7 @@ telescope.setup{
             -- TODO add builtin options.
         },
         file_sorter =  require'telescope.sorters'.get_fuzzy_file,
-        file_ignore_patterns = {"Session.vim", ".backup",".swap",".langservers",".session",".undo","*.git","node_modules","vendor",".cache",".vscode-server",".Desktop",".Documents", "tags", "dist", "build", "ressources", "package-lock.json", "yarn.lock", "yarn-error.log", "*.log", "deploy", "*.lock", ".gif", ".jpg", ".png", ".jpeg", "__snapshots__"},
+        file_ignore_patterns = {"Session.vim", ".backup",".swap",".langservers",".session",".undo","*.git","node_modules","vendor",".cache",".vscode-server",".Desktop",".Documents", "tags", "dist", "^build", "ressources", "package-lock.json", "yarn.lock", "yarn-error.log", "*.log", "deploy", "*.lock", ".gif", ".jpg", ".png", ".jpeg", "__snapshots__"},
         generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
         shorten_path = true,
         winblend = 0,
