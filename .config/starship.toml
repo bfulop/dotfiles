@@ -1,3 +1,5 @@
+command_timeout = 10000
+
 [time]
 disabled = false
 format = "at [$time]($style) "
