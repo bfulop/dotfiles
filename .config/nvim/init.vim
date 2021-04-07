@@ -79,6 +79,7 @@ if !exists('g:vscode')
   Plug 'nvim-lua/telescope.nvim'
   Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-obsession'
   Plug 'tpope/vim-eunuch'
@@ -128,6 +129,7 @@ let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']
 " https://is.gd/4keyXX
 let g:loaded_compe_calc = 0
 let g:loaded_compe_emoji = 0
+let g:loaded_compe_luasnip = 0
 let g:loaded_compe_nvim_lua = 0
 let g:loaded_compe_path = 0
 let g:loaded_compe_snippets_nvim = 0

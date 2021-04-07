@@ -30,6 +30,9 @@ utils.nnoremap(leader..'2', ":lua require'telescope.builtin'.help_tags()<cr>")
 utils.vnoremap(leader..'2', ":lua require'telescope.builtin'.help_tags()<cr>")
 utils.noremap('',leader..'1', ":lua require'telescope.builtin'.builtin()<cr>")
 
+-- TELESCOPE LSP PICKERS
+utils.nnoremap(leader..'lr', ":lua require'telescope.builtin'.lsp_references()<cr>")
+utils.nnoremap(leader..'ld', ":lua require'telescope.builtin'.lsp_document_diagnostics()<cr>")
 
 -- NEOSCROLL MAPPINGS
 utils.nnoremap('<C-y>', ":lua require('neoscroll').scroll(-3, false, 12)<cr>")
