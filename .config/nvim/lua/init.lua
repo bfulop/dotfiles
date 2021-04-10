@@ -10,7 +10,7 @@ neoscroll.setup({
   respect_scrolloff = true,   
   cursor_scrolls_alone = true,  
 })
-
+--
 -- MY CONFS
 -- require('_plugins')
 -- require('_theme')
@@ -28,6 +28,7 @@ require('_hexokinase')
 require('_telescope')
 require('_treesitter')
 --require('_nvimtree')
+require('_galaxyline')
 
 --LSP
 require('_lsp-config')

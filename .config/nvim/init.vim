@@ -87,6 +87,8 @@ if !exists('g:vscode')
   Plug 'andymass/vim-matchup'
   " Plug 'airblade/vim-gitgutter'
   Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
+  Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+  Plug 'kyazdani42/nvim-web-devicons' 
   Plug 'haya14busa/vim-keeppad'
   Plug 'jesseleite/vim-noh'
   Plug 'tmsvg/pear-tree'
@@ -102,7 +104,6 @@ if !exists('g:vscode')
   " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   " Plug 'junegunn/fzf.vim'
   Plug 'junegunn/limelight.vim'
-  Plug 'itchyny/lightline.vim'
   Plug 'aereal/vim-colors-japanesque'
   " Plug 'AlessandroYorba/Despacio'
   " Plug 'BrainDeath0/Hypsteria'
@@ -137,6 +138,7 @@ let g:loaded_compe_spell = 0
 let g:loaded_compe_tags = 0
 let g:loaded_compe_treesitter = 0
 
+let g:matchup_matchparen_offscreen = {'method': 'popup'}
 
 if !exists('g:vscode')
   " Load Neovim Lua-based plugin configurations.
@@ -252,43 +254,6 @@ tnoremap <C-v><Esc> <Esc>
 
 " Pear tree don't erase temporarly the closing brackets
 let g:pear_tree_repeatable_expand = 0
-
-" Lightline config for narrow windows
-let g:lightline = {
-      \ 'colorscheme': 'inkstained',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             ['guten', 'buffernum', 'filename', 'modified' ] ],
-      \   'right': [ [ 'lineinfo' ],
-      \              [ 'percent' ],
-      \              [ 'filetype' ] ]
-      \ },
-      \ 'component': {
-      \   'buffernum': '%n'
-      \ },
-      \ 'component_function': {
-      \   'fileformat': 'LightlineFileformat',
-      \   'filetype': 'LightlineFiletype',
-      \   'filename': 'LightlineFilename',
-      \ },
-      \ }
-
-function! LightlineFileformat()
-  return winwidth(0) > 400 ? &fileformat : ''
-endfunction
-
-function! LightlineFiletype()
-  return winwidth(0) > 100 ? (&filetype !=# '' ? &filetype : 'no ft') : ''
-endfunction
-
-function! LightlineFilename()
-  let root = fnamemodify(get(b:, 'git_dir'), ':h')
-  let path = expand('%:p')
-  if path[:len(root)-1] ==# root
-    return path[len(root)+1:]
-  endif
-  return expand('%')
-endfunction
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"

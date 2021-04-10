@@ -276,6 +276,15 @@ Utils.get_python_tool = function(bin_name)
   return result
 end
 
+Utils.is_buffer_empty = function()
+    -- Check whether the current buffer is empty
+    return vim.fn.empty(vim.fn.expand('%:t')) == 1
+end
+
+Utils.has_width_gt = function(cols)
+    -- Check if the windows width is greater than a given number of columns
+    return vim.fn.winwidth(0) / 2 > cols
+end
 
 
 
