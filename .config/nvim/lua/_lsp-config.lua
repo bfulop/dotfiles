@@ -39,7 +39,7 @@ local diagnostic_handler = vim.lsp.with(
       severity_limit = 'Hint',
     },
     underline = true,
-    update_in_insert = true,
+    update_in_insert = false,
     virtual_text = {
       spacing = 2,
       severity_limit = 'Hint',
