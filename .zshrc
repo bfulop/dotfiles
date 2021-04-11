@@ -124,6 +124,7 @@ export PATH="/Users/balintfulop/Library/Python/2.7/bin:$PATH"
 
 # DOTBARE
 export DOTBARE_DIFF_PAGER="delta --diff-so-fancy --line-numbers"
+export DOTBARE_FZF_DEFAULT_OPTS="--preview-window=right:75%"
 
 alias ls="exa -lh"
 
