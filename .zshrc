@@ -122,6 +122,9 @@ export PATH="$HOME/Downloads/nvim-osx64/bin/:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/Users/balintfulop/Library/Python/2.7/bin:$PATH"
 
+# DOTBARE
+export DOTBARE_DIFF_PAGER="delta --diff-so-fancy --line-numbers"
+
 alias ls="exa -lh"
 
 # Generated for envman. Do not edit.
