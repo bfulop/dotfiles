@@ -137,6 +137,16 @@ let g:loaded_compe_snippets_nvim = 0
 let g:loaded_compe_spell = 0
 let g:loaded_compe_tags = 0
 let g:loaded_compe_treesitter = 0
+inoremap <silent><expr> <C-y> compe#confirm('<C-y>')
+
+function! SetLSPHighlights()
+    highlight LspDiagnosticsUnderlineError guifg=NONE gui=undercurl
+    highlight LspDiagnosticsUnderlineWarning guifg=NONE gui=undercurl
+    highlight LspDiagnosticsUnderlineInformation guifg=NONE, gui=undercurl
+    highlight LspDiagnosticsUnderlineHint guifg=NONE gui=undercurl
+endfunction
+
+autocmd ColorScheme * call SetLSPHighlights()
 
 let g:matchup_matchparen_offscreen = {'method': 'popup'}
 

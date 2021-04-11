@@ -36,13 +36,13 @@ local nvim_lsp = require'lspconfig'
 local diagnostic_handler = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     signs = {
-      severity_limit = 'Warning',
+      severity_limit = 'Hint',
     },
-    underline = false,
-    update_in_insert = false,
+    underline = true,
+    update_in_insert = true,
     virtual_text = {
       spacing = 2,
-      severity_limit = 'Warning',
+      severity_limit = 'Hint',
     },
   }
 )
@@ -69,6 +69,7 @@ local lsp_on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(0, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   vim.api.nvim_buf_set_keymap(0, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
   vim.api.nvim_buf_set_keymap(0, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(0, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   -- vim.api.nvim_buf_set_keymap(0, 'n', 'gR','<cmd>lua vim.lsp.buf.rename()<CR>', opts)
   vim.api.nvim_buf_set_keymap(0, 'i', '<c-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
   vim.api.nvim_buf_set_keymap(0, 'n', '<Space>=', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
@@ -77,7 +78,10 @@ local lsp_on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(0, 'n', '<Space>d', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
 
   -- nvim LSP Utils extra functions
-  require("nvim-lsp-ts-utils").setup {}
+  require("nvim-lsp-ts-utils").setup {
+    disable_commands = false,
+    enable_import_on_completion = false
+  }
 
   -- no default maps, so you may want to define some here
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gs", ":TSLspOrganize<CR>", {silent = true})
@@ -85,9 +89,16 @@ local lsp_on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gR", ":TSLspRenameFile<CR>", {silent = true})
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", ":TSLspImportAll<CR>", {silent = true})
 
-  -- Enable LSP omnifunc.
-  vim.cmd('setlocal omnifunc=v:lua.vim.lsp.omnifunc')
+  -- LSP-based omnifunc.
+  --vim.bo.omnifunc = vim.lsp.omnifunc
+  vim.bo.omnifunc = 'v:lua.vim.lsp.omnifunc'
 
+  -- vim.fn.sign_define("LspDiagnosticsSignHint", {texthl = "LspDiagnosticsSignHint", text = "", numhl = "LspDiagnosticsSignHint"})
+  -- vim.fn.sign_define("LspDiagnosticsSignError", {texthl = "LspDiagnosticsSignError", text = "", numhl = "LspDiagnosticsSignError"})
+  -- vim.fn.sign_define("LspDiagnosticsSignWarning", {texthl = "LspDiagnosticsSignWarning", text = "", numhl = "LspDiagnosticsSignWarning"})
+  -- vim.fn.sign_define("LspDiagnosticsSignInformation", {texthl = "LspDiagnosticsSignInformation", text = "", numhl = "LspDiagnosticsSignInformation"})
+  -- vim.fn.sign_define("LspDiagnosticsSignHint", {texthl = "LspDiagnosticsSignHint", text = "", numhl = "LspDiagnosticsSignHint"})
+  --
   -- Indicate that LSP is ready.
   print('Language server is ready')
 end
@@ -155,4 +166,3 @@ nvim_lsp.efm.setup {
     "typescriptreact"
   }
 }
-
