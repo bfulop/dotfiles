@@ -78,29 +78,24 @@ local lsp_on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(0, 'n', '<Space>d', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
 
   -- nvim LSP Utils extra functions
-  local ts_utils = require("nvim-lsp-ts-utils")
-  ts_utils.setup {
-    disable_commands = false,
-    enable_import_on_completion = true,
-    import_on_completion_timeout = 5000,
-    --eslint
-    eslint_bin = "eslint_d", -- use eslint_d if possible!
-    eslint_args = {"-f", "json", "--stdin", "--stdin-filename", "$FILENAME"},
-    eslint_enable_disable_comments = true,
+  -- local ts_utils = require("nvim-lsp-ts-utils")
+  -- ts_utils.setup {
+  --   disable_commands = false,
+  --   enable_import_on_completion = true,
+  --   import_on_completion_timeout = 5000,
+  --   --eslint
+  --   eslint_bin = "eslint_d", -- use eslint_d if possible!
+  --   eslint_args = {"-f", "json", "--stdin", "--stdin-filename", "$FILENAME"},
+  --   eslint_enable_disable_comments = true,
+  --
+  --   -- experimental settings!
+  --   -- eslint diagnostics
+  --   eslint_enable_diagnostics = false,
+  --   -- formatting
+  --   enable_formatting = false,
+  -- }
 
-    -- experimental settings!
-    -- eslint diagnostics
-    eslint_enable_diagnostics = true,
-    eslint_diagnostics_debounce = 750,
-    -- formatting
-    enable_formatting = true,
-    formatter = "prettier",
-    formatter_args = {"--stdin-filepath", "$FILENAME"},
-    format_on_save = false,
-    no_save_after_format = false
-  }
-
-  vim.lsp.buf_request = ts_utils.buf_request
+  -- vim.lsp.buf_request = ts_utils.buf_request
 
   -- no default maps, so you may want to define some here
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gs", ":TSLspOrganize<CR>", {silent = true})
@@ -168,20 +163,21 @@ nvim_lsp.tsserver.setup {
   }
 }
 
--- nvim_lsp.efm.setup {
---   default_config = {
---     cmd = {
---       "efm-langserver",
---       "-c",
---       [["$HOME/.config/efm-langserver/config.yaml"]]
---     }
---   },
---   filetypes = {
---     "javascript",
---     "javascriptreact",
---     "javascript.jsx",
---     "typescript",
---     "typescript.tsx",
---     "typescriptreact"
---   }
--- }
+nvim_lsp.efm.setup {
+  default_config = {
+    cmd = {
+      "efm-langserver",
+      "-c",
+      [["$HOME/.config/efm-langserver/config.yaml"]]
+    }
+  },
+  flags = {debounce_text_changes = 350},
+  filetypes = {
+    "javascript",
+    "javascriptreact",
+    "javascript.jsx",
+    "typescript",
+    "typescript.tsx",
+    "typescriptreact"
+  }
+}
