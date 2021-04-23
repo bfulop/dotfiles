@@ -14,7 +14,7 @@ set inccommand=nosplit
 set termguicolors
 filetype plugin on
 syntax on
-set updatetime=100
+set updatetime=600
 
 set hidden
 set cmdheight=2
@@ -22,7 +22,7 @@ set signcolumn=yes
 set noshowmode
 " set laststatus=2
 " parcel hot module reload (?):
-set backupcopy=yes
+set backupcopy=no
 set history=300
 set undolevels=300
 set autoindent
@@ -41,25 +41,6 @@ set shortmess-=F
 
 let $PATH .= ':/Users/balintfulop/.nodenv/versions/15.5.1/bin/'
 
-if !exists('g:vscode')
-let g:ale_disable_lsp = 1
-let g:ale_fixers = {
-\  'javascript': ['prettier', 'eslint'],
-\  'typescript': ['prettier', 'eslint'],
-\  'typescriptreact': ['prettier', 'eslint'],
-\}
-let g:ale_completion_enabled = 0
-let g:ale_javascript_prettier_use_global = 1
-let g:ale_sign_error = '!'
-let g:ale_sign_warning = '◆'
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_save = 0
-let g:ale_lint_delay = 2000
-nnoremap <Leader>ll    <cmd>ALELint<CR>
-endif
-
 call plug#begin('~/config/.nvim/plugged')
 if !exists('g:vscode')
   Plug 'neovim/nvim-lspconfig'
@@ -69,7 +50,6 @@ if !exists('g:vscode')
   Plug 'nvim-treesitter/nvim-treesitter-refactor'
   Plug 'nvim-treesitter/nvim-treesitter-textobjects'
   Plug 'nvim-treesitter/completion-treesitter'
-  " Plug 'dense-analysis/ale'
   Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
   Plug 'lambdalisue/fern.vim'
   Plug 'mhartington/formatter.nvim'
