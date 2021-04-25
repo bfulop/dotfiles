@@ -113,8 +113,9 @@ export PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
+# disable nodenv, switching to volta
+# export PATH="$HOME/.nodenv/bin:$PATH"
+# eval "$(nodenv init -)"
 
 # NEOVIM
 # export PATH="~/install/neovim/nvim-osx64/bin/"
@@ -140,3 +141,5 @@ fi
 eval "$(starship init zsh)"
 
 source /Users/balintfulop/.config/broot/launcher/bash/br
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
