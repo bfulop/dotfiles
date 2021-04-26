@@ -32,11 +32,16 @@ hi LspDiagnosticsError ctermfg=188 ctermbg=66 guifg=#bdbbb6 gui=italic
 hi LspDiagnosticsWarning ctermfg=188 ctermbg=66 cterm=bold guifg=#cbd7dc guibg=#EDEBE9 gui=bold
 hi LspDiagnosticsInformation ctermfg=188 ctermbg=66 cterm=bold guifg=#cbd7dc gui=NONE
 hi LspDiagnosticsHint ctermfg=188 ctermbg=66 cterm=bold guifg=#cbd7dc guibg=#EDEBE9 gui=NONE
-hi LspDiagnosticsDefaultHint ctermfg=188 ctermbg=66 cterm=NONE guifg=#9784ae guibg=#EDEBE9 gui=NONE
+hi LspDiagnosticsDefaultHint ctermfg=188 ctermbg=66 cterm=NONE guifg=#bdbbb6 guibg=#EDEBE9 gui=NONE
+hi LspDiagnosticsDefaultError ctermfg=188 ctermbg=66 cterm=NONE guifg=#b0789b guibg=#EDEBE9 gui=NONE
+hi LspDiagnosticsDefaultWarning ctermfg=188 ctermbg=66 cterm=NONE guifg=#d3d1cc guibg=#EDEBE9 gui=NONE
 " hi LspDiagnosticsSignHint guifg=#4fc1ff ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi LspDiagnosticsVirtualTextInformation guifg=#ffcc66 ctermfg=221 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi LspDiagnosticsVirtualTextHint guifg=#cfd9d9 ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi LspDiagnosticsUnderlineHint guifg=#729cb3 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi LspDiagnosticsVirtualTextError guifg=#bdbbb6 ctermfg=221 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi LspDiagnosticsVirtualTextWarning guifg=#bdbbb6 ctermfg=221 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi LspDiagnosticsUnderlineHint guifg=#d3d1cc ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi LspDiagnosticsUnderlineInformation guifg=#d3d1cc ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi NonText ctermfg=247 ctermbg=254 cterm=NONE guifg=#929cad guibg=#EDEBE9 gui=NONE
 hi MatchParen ctermfg=132 ctermbg=NONE cterm=bold guifg=#aa586e guibg=NONE gui=bold
 hi Comment ctermfg=247 cterm=NONE guifg=#929cad gui=italic

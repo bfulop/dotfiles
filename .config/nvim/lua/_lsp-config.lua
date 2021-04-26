@@ -51,9 +51,9 @@ local diagnostic_handler = vim.lsp.with(
 local none_diagnostic_handler = function() end
 
 -- Diagnostics symbols for display in the sign column.
-vim.cmd('sign define LspDiagnosticsSignError text=✖')
-vim.cmd('sign define LspDiagnosticsSignWarning text=✖')
-vim.cmd('sign define LspDiagnosticsSignInformation text=●')
+vim.cmd('sign define LspDiagnosticsSignError text=▲')
+vim.cmd('sign define LspDiagnosticsSignWarning text=◆')
+vim.cmd('sign define LspDiagnosticsSignInformation text=ℹ︎')
 vim.cmd('sign define LspDiagnosticsSignHint text=●')
 
 -- On attach function.
