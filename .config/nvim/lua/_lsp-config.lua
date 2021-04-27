@@ -32,12 +32,24 @@ local nvim_lsp = require'lspconfig'
 --   end, 500)
 -- end
 
+local borders = {
+  {'┌', 'FloatBorder'},
+  {'─', 'FloatBorder'},
+  {'┐', 'FloatBorder'},
+  {'│', 'FloatBorder'},
+  {'┘', 'FloatBorder'},
+  {'─', 'FloatBorder'},
+  {'└', 'FloatBorder'},
+  {'│', 'FloatBorder'}
+}
+
 -- Custom diagnostic handler.
 local diagnostic_handler = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     signs = {
       severity_limit = 'Hint',
     },
+    severity_sort = true,
     underline = true,
     update_in_insert = false,
     virtual_text = {
@@ -46,6 +58,19 @@ local diagnostic_handler = vim.lsp.with(
     },
   }
 )
+
+local signature_help = vim.lsp.with(
+  vim.lsp.handlers.signature_help, {
+    border = borders
+  }
+)
+
+local hover_handler = vim.lsp.with(
+  vim.lsp.handlers.hover, {
+    border = borders
+  }
+)
+
 
 -- Empty diagnostic handler.
 local none_diagnostic_handler = function() end
@@ -159,7 +184,9 @@ nvim_lsp.tsserver.setup {
   filetypes = { 'javascript', 'typescript', 'typescriptreact' },
   cmd = {'node', '/Users/balintfulop/Install/typescript-language-server/server/lib/cli.js', '--stdio'};
   handlers = {
-    ['textDocument/publishDiagnostics'] = diagnostic_handler
+    ['textDocument/publishDiagnostics'] = diagnostic_handler,
+    ['textDocument/signatureHelp'] = signature_help,
+    ['textDocument/hover'] = hover_handler,
   }
 }
 
