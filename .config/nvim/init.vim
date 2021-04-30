@@ -1,3 +1,8 @@
+set linespace=3
+set guioptions-=m "remove menu bar
+set guioptions-=T "remove toolbar
+set guioptions-=r
+set guioptions-=L
 set nonumber
 set ignorecase
 set smartcase
@@ -39,6 +44,15 @@ set shortmess-=S
 " vim-lsc avoid suppressing error messages from this plugin.
 set shortmess-=F
 
+let g:neovide_cursor_animation_length=0.08
+let g:neovide_cursor_antialiasing=v:true
+let g:neovide_floating_blur=v:true
+let g:neovide_floating_opacity=1.0
+let g:neovide_fullscreen=v:false
+let g:neovide_refresh_rate=75
+let g:neovide_window_floating_blur=v:false
+let g:neovide_window_floating_opacity=1.0
+
 " let $PATH .= ':/Users/balintfulop/.nodenv/versions/15.5.1/bin/'
 
 call plug#begin('~/config/.nvim/plugged')
@@ -57,7 +71,7 @@ if !exists('g:vscode')
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-lua/telescope.nvim'
-  Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
+  " Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
   Plug 'editorconfig/editorconfig-vim'
   Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
   Plug 'tpope/vim-sensible'
@@ -67,7 +81,7 @@ if !exists('g:vscode')
   Plug 'andymass/vim-matchup'
   " Plug 'airblade/vim-gitgutter'
   Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
-  Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+  " Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
   Plug 'kyazdani42/nvim-web-devicons' 
   Plug 'haya14busa/vim-keeppad'
   Plug 'jesseleite/vim-noh'
@@ -76,6 +90,8 @@ if !exists('g:vscode')
   Plug 'prettier/vim-prettier', { 'do': 'npm install',  'branch': 'release/0.x'  }
   Plug 'plasticboy/vim-markdown'
   Plug 'elzr/vim-json'
+  Plug 'hoob3rt/lualine.nvim'
+  " Plug 'datwaft/bubbly.nvim'
   " Plug 'sheerun/vim-polyglot'
   " Plug 'reedes/vim-pencil'
   " Plug 'tpope/vim-commentary'
@@ -91,7 +107,7 @@ if !exists('g:vscode')
   Plug 'kyazdani42/blue-moon'
   " Plug 'vim-scripts/Sift'
   " Plug 'equalsraf/neovim-gui-shim'
-  Plug 'karb94/neoscroll.nvim'
+  " Plug 'karb94/neoscroll.nvim'
   " Plug 'akiyosi/gonvim-fuzzy'
   " Plug 'metakirby5/codi.vim'
   Plug 'machakann/vim-highlightedyank'
@@ -134,12 +150,6 @@ if !exists('g:vscode')
   " Load Neovim Lua-based plugin configurations.
 if has('nvim')
   lua require("init")
-    augroup ScrollbarInit
-      autocmd!
-      autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
-      autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
-      autocmd WinLeave,FocusLost             * silent! lua require('scrollbar').clear()
-    augroup end
 endif
 lua <<EOF
 require('formatter').setup({

@@ -129,6 +129,9 @@ export PATH="/Users/balintfulop/Library/Python/2.7/bin:$PATH"
 export DOTBARE_DIFF_PAGER="delta --diff-so-fancy --line-numbers"
 export DOTBARE_FZF_DEFAULT_OPTS="--preview-window=right:75%"
 
+# GONEOVIM
+export PATH=$PATH:/Applications/goneovim.app/Contents/MacOS
+
 alias ls="exa -lh"
 
 # Generated for envman. Do not edit.
