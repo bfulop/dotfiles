@@ -1,0 +1,24 @@
+// Documentation at https://www.sublimetext.com/docs/themes.html
+{
+	"variables":
+	{
+		"font_face": "Iosevka Term SS09",
+		"font_size_sm": 13,
+		"font_size": 13,
+		"font_size_lg": 13,
+		"font_size_title": 18,
+		"--background": "rgba(237,235,233, 1)",
+		"light_bg": "rgba(237,235,233, 1)",
+		"sheet_light_modifier": "color(rgba(237,235,233, 1) l(-0.2))",
+		"sheet_medium_modifier": "color(rgba(237,235,233, 1) l(-0.2))",
+	},
+	"rules":
+	[
+		
+		// Satus Bar
+		{
+			"class": "status_bar",
+			"layer0.tint": "white",
+		},
+	]
+}

@@ -1,0 +1,14 @@
+" Type :help nv for help.
+" let mapleader=,
+nnoremap <leader>v :GotoSymbolInProject<CR>
+nnoremap <leader>f :ShowOverlay overlay=goto text=@<CR>
+nnoremap <leader>d :Neovintageous action=toggle_side_bar<CR>
+
+
+" Window action remaps
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-d> 20<C-e>
+nnoremap <C-u> 20<C-y>

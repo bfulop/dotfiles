@@ -1,0 +1,19 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"ayu",
+		"LSP",
+		"LSP-eslint",
+		"LSP-json",
+		"LSP-typescript",
+		"NeoVintageous",
+		"Package Control",
+		"Theme - Monokai Pro",
+	],
+	"install_prereleases": ["NeoVintageous"],
+}

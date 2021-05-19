@@ -1,0 +1,27 @@
+// Documentation at https://www.sublimetext.com/docs/themes.html
+[
+     {
+       "class": "sidebar_label",
+       "font.face": "Iosevka SS09"
+     },
+     {
+       "class": "sidebar_heading",
+       "font.face": "Iosevka SS09"
+     },
+     {
+       "class": "tab_label",
+       "font.face": "Iosevka SS09"
+     },
+     {
+       "class": "label_control",
+       "font.face": "Iosevka SS09"
+     },
+     {
+       "class": "quick_panel_label",
+       "font.face": "Iosevka SS09"
+     },
+     {
+       "class": "quick_panel_path_label",
+       "font.face": "Iosevka SS09"
+     }
+   ]

@@ -1,0 +1,62 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+	"variables": {
+		"white5": "#EDEBE9",
+		"grey3": "#557498",
+		"red": "#aa586e",
+		"red2": "#b0789b",
+		"red3": "#DC7786"
+	},
+	"globals": {
+    "caret": "var(red3)",
+    "block_caret": "color(var(red3) a(0.4))",
+		"brackets_options": "foreground bold underline",
+		"brackets_foreground": "var(red2)",
+		"bracket_contents_options": "foreground underline",
+		"bracket_contents_foreground": "var(blue2)",
+		"active_guide": "var(white3)",
+	},
+	"rules": [
+		{
+			"name": "LSP Warning",
+			"scope": "markup.warning.lsp",
+			"foreground": "var(white2)"
+		},
+		{
+			"name": "String",
+			"scope": "string",
+			"foreground": "#5e99b1",
+			"background": "#cbd7dc",
+		},
+		{
+			"name": "Comment",
+			"scope": "comment, punctuation.definition.comment",
+			"foreground": "var(grey2)",
+			"font_style": "italic",
+		},
+		{
+			"name": "Keyword",
+			"scope": "keyword - keyword.operator, keyword.operator.word",
+			"foreground": "var(red2)",
+			"font_style": "bold"
+		},
+		{
+			"name": "Inherited class",
+			"scope": "entity.other.inherited-class",
+			"foreground": "var(red2)",
+			"font_style": "bold"
+		},
+		{
+			"name": "Entity name",
+			"scope": "entity.name.function",
+			"foreground": "var(red2)",
+			"font_style": "bold"
+		},
+		{
+			"name": "Function argument",
+			"scope": "variable.parameter",
+			"foreground": "var(red)",
+			"font_style": "bold"
+		},
+	]
+}

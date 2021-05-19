@@ -1,0 +1,23 @@
+// Settings in here override those in "LSP/LSP.sublime-settings"
+{
+  // Delay showing diagnostics by this many milliseconds.
+  // The delay will only kick into action when previously there were
+  // no diagnostics in the view. If there were previous diagnostics in the view,
+  // then the delay setting here is ignored and diagnostics are updated
+  // immediately.
+  "diagnostics_delay_ms": 2000,
+  "show_diagnostics_count_in_view_status": true,
+  // Add an additional delay when the auto-complete widget is currently visible.
+  // Just like the above "diagnostics_delay_ms", the unit is milliseconds.
+  // The total amount of delay would be
+  //
+  //    diagnostics_delay_ms + diagnostics_additional_delay_auto_complete_ms
+  //
+  // See also: "diagnostics_delay_ms".
+  "diagnostics_additional_delay_auto_complete_ms": 2000,
+  "lsp_format_on_save": true,
+  "show_diagnostics_severity_level": 2,
+  "document_highlight_style": "fill",
+  "diagnostics_highlight_style": "stippled",
+  "show_code_actions": "bulb",
+}

@@ -1,0 +1,138 @@
+{
+	// Sets the colors used within the text area.
+	// The value "auto" will switch between the "light_color_scheme" and
+	// "dark_color_scheme" based on the operating system appearance.
+	"color_scheme": "auto",
+	// Controls the "color_scheme" when set to "auto"
+	"light_color_scheme": "Packages/Color Scheme - Default/Breakers.sublime-color-scheme",
+	"dark_color_scheme": "Packages/Theme - Monokai Pro/Monokai Pro (Filter Octagon).sublime-color-scheme",
+	"font_face": "Iosevka Term SS09",
+	"font_size": 13,
+	"ignored_packages": [
+		"Six",
+		"Vintage",
+		"Vintageous",
+	],
+	"theme": "ayu-light.sublime-theme",
+	// If enabled, will highlight the gutter for any line with a caret
+	"highlight_line": false,
+	"highlight_gutter": true,
+	"line_numbers": false,
+	// Draw shadows under popup windows
+	"popup_shadows": true,
+	"margin": 0,
+	"always_show_minimap_viewport": true,
+	// When enabled, the caret will be drawn as a rectangle, using the width
+	// of the current character
+	"show_rel_path": true,
+	"show_project_first": true,
+	"block_caret": true,
+	"line_padding_top": 1,
+	"line_padding_bottom": 1,
+	"scroll_past_end": 0.5,
+	"scroll_context_lines": 1,
+	// Valid values are "system", "enabled" and "disabled"
+	"overlay_scroll_bars": "enabled",
+	"indent_guide_options": [
+		"draw_active_single"
+	],
+	// Add trailing symbols (e.g., '.', '()') if the auto complete engine
+	// thinks they're likely enough
+	// Show folders in the side bar in bold
+	"bold_folder_labels": true,
+	// The number of spaces a tab is considered equal to
+	"tab_size": 2,
+	"auto_complete_trailing_symbols": true,
+	"folder_exclude_patterns": [
+		"build",
+		"node_modules",
+		"dist",
+		".cache",
+		"cache",
+		".github",
+		".snowpack",
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".Trash",
+		".Trash-*"
+	],
+	"file_exclude_patterns": [
+		".cache",
+		"*-lock.json",
+		"yarn.lock",
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		".directory",
+		"desktop.ini",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace",
+		"Session.vim",
+		"tags",
+		"Dockerfile"
+	],
+	// index_exclude_patterns indicate which files won't be indexed.
+	"index_exclude_patterns": [
+		"*.log",
+		"dist/*.*",
+		"build/*.*",
+		"*.svg",
+		"package-lock.json",
+		"yarn-lock.json"
+	],
+	"neovintageous_build_version": 11100,
+	// Indicate modified lines in the gutter
+	// - true: Enables modified line indicators on all files
+	// - "auto": Enables modified line indicators on tracked files within Git
+	// - false: Disables modified line indicators
+	"mini_diff": "auto",
+	// Disables horizontal scrolling if enabled.
+	// May be set to true, false, or "auto", where it will be disabled for
+	// source code, and otherwise enabled.
+	"scroll_speed": 0.2,
+	"word_wrap": true,
+	// Set to a value other than 0 to force wrapping at that column rather than
+	// the window width. See "wrap_width_style" for extra options.
+	"wrap_width": 80,
+	// Controls how the "wrap_width" setting is applied. The following options
+	// are available:
+	// - "constant": Always wrap at exactly the wrap width.
+	// - "min": Wrap at the wrap width or less if there is less space available.
+	"wrap_width_style": "min",
+	"vintageous_handle_keys": {
+		"<C-f>": false,
+		"<C-M>": false,
+		"<C-m>": false,
+		/*"<C-M>": false,*/
+		"<C-.>": false,
+		"<C-q>": false,
+		"<C-Q>": false,
+		"<C-g>": false,
+		"<C-o>": false,
+		"<C-i>": false,
+		"<C-down>": false,
+		"<C-up>": false,
+		"<K>": false,
+	},
+	"vintageous_use_ctrl_keys": true,
+	"vintageous_use_super_keys": false,
+	"dark_theme": "Monokai Pro (Filter Spectrum).sublime-theme",
+	"light_theme": "Default.sublime-theme",
+}
