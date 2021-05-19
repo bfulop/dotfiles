@@ -1,0 +1,10 @@
+{
+	"folders":
+	[
+		{
+			"name": "Render server",
+			"path": "/Users/balintfulop/Work2/render_server",
+			"folder_exclude_patterns": ["vanilla"]
+		}
+	]
+}

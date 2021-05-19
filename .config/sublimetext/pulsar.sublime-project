@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"name": "Pulsar",
+			"path": "/Users/balintfulop/Work/pulsar",
+			"folder_exclude_patterns": [
+				"coverage"
+			],
+		}
+	],
+	"settings": {
+		"LSP": {
+			"LSP-eslint": {
+				"settings": {
+					"workingDirectories": [
+						"modules/dashboard",
+						"modules/api-client",
+						"modules/common-ui",
+					]
+				}
+			}
+		}
+	}
+}

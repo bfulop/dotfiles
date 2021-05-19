@@ -1,0 +1,637 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"o",
+				"\"options\""
+			],
+			[
+				"extr",
+				"extractQueryFormData"
+			],
+			[
+				"es",
+				"\"settings\""
+			],
+			[
+				"RAn",
+				"RandGen"
+			],
+			[
+				"catch",
+				"CatchAll"
+			],
+			[
+				"su",
+				"succeed"
+			],
+			[
+				"fa",
+				"fail"
+			],
+			[
+				"runP",
+				"runPromiseExit"
+			],
+			[
+				"suc",
+				"succeed"
+			],
+			[
+				"pro",
+				"provideAll"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "widgets-banner.sublime-project",
+			"settings":
+			{
+				"buffer_size": 110,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					13,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_o",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal"
+								}
+							],
+							[
+								"lsp_json_auto_complete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "name"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ":"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"lsp_json_auto_complete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "Banner"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " Widget"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ","
+								}
+							]
+						]
+					},
+					"GAAAABQAAAAAAAAAFQAAAAAAAAAAAAAAFQAAAAAAAAAYAAAAAAAAAAAAAAAYAAAAAAAAABoAAAAAAAAAAAAAABkAAAAAAAAAGgAAAAAAAAAAAAAAGgAAAAAAAAAbAAAAAAAAAAAAAAAbAAAAAAAAABwAAAAAAAAAAAAAABwAAAAAAAAAHQAAAAAAAAAAAAAAHgAAAAAAAAAfAAAAAAAAAAAAAAAfAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAIgAAAAAAAAAAAAAAIQAAAAAAAAAiAAAAAAAAAAAAAAAiAAAAAAAAACMAAAAAAAAAAAAAACMAAAAAAAAAJAAAAAAAAAAAAAAAJAAAAAAAAAAlAAAAAAAAAAAAAAAlAAAAAAAAACYAAAAAAAAAAAAAACYAAAAAAAAAJwAAAAAAAAAAAAAAJwAAAAAAAAAoAAAAAAAAAAAAAAAoAAAAAAAAACkAAAAAAAAAAAAAACkAAAAAAAAAKgAAAAAAAAAAAAAAKgAAAAAAAAArAAAAAAAAAAAAAAArAAAAAAAAACwAAAAAAAAAAAAAACwAAAAAAAAALQAAAAAAAAAAAAAALQAAAAAAAAAuAAAAAAAAAAAAAAAvAAAAAAAAADAAAAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAABEAAAAAAAAAEQAAAAAAAAAAAAAAAADwvw"
+				]
+			]
+		},
+		{
+			"file": "/Users/balintfulop/Work/Widgets/banner/src/main.js",
+			"settings":
+			{
+				"buffer_size": 6683,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Add Repository"
+			],
+			[
+				"esl",
+				"Preferences: LSP-eslint Settings"
+			],
+			[
+				"es",
+				"Preferences: LSP-eslint Settings"
+			],
+			[
+				"lsp",
+				"Preferences: LSP Settings"
+			],
+			[
+				"re",
+				"LSP: Restart Servers"
+			],
+			[
+				"lsp res",
+				"LSP: Restart Servers"
+			],
+			[
+				"format",
+				"LSP: Format Selection"
+			],
+			[
+				"spli",
+				"File: Split View"
+			],
+			[
+				"new vie",
+				"File: New View into File"
+			],
+			[
+				"rest",
+				"LSP: Restart Servers"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"lsp-es",
+				"Preferences: LSP-eslint Settings"
+			],
+			[
+				"lsp re",
+				"LSP: Restart Servers"
+			],
+			[
+				"lsp est",
+				"Preferences: LSP-eslint Settings"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"lsp typ",
+				"Preferences: LSP-typescript Settings"
+			],
+			[
+				"boo",
+				"Bookmarks: Select Next"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"upgrade",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"reloa",
+				"NeoVintageous: Reload RC File"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"setting",
+				"Preferences: Settings"
+			],
+			[
+				"neo",
+				"NeoVintageous: Reload RC File"
+			],
+			[
+				"no",
+				"NeoVintageous: Reload RC File"
+			],
+			[
+				"them",
+				"UI: Select Theme"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"the",
+				"Monokai Pro: select theme"
+			],
+			[
+				"dia",
+				"LSP: Toggle Diagnostics Panel"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 130.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/balintfulop/Work/Widgets/banner"
+	],
+	"file_history":
+	[
+		"/Users/balintfulop/Work/pulsar/modules/common-ui/src/components/PulsarTable/Table.tsx",
+		"/Users/balintfulop/.config/sublimetext/pulsar.sublime-project",
+		"/Users/balintfulop/Work/editorv3/.gitignore",
+		"/Users/balintfulop/Work2/render_client_v3/src/editorUI.ts",
+		"/Users/balintfulop/Work2/render_client_v3/src/domDiffs.ts",
+		"/Users/balintfulop/Work2/render_client_v3/src/windowScroll.ts",
+		"/Users/balintfulop/Library/Containers/co.noteplan.NotePlan3/Data/Library/Application Support/co.noteplan.NotePlan3/Notes/day-3-afternoon1.md",
+		"/Users/balintfulop/Work2/practical-fp-in-ts-may-2021/src/exercises/day-2/01-effect.ts",
+		"/Users/balintfulop/Work2/practical-fp-in-ts-may-2021/src/exercises/day-1/03-gadt.ts",
+		"/Users/balintfulop/Library/Containers/co.noteplan.NotePlan3/Data/Library/Application Support/co.noteplan.NotePlan3/Notes/practical fp.md",
+		"/Users/balintfulop/Library/Containers/co.noteplan.NotePlan3/Data/Library/Application Support/co.noteplan.NotePlan3/Notes/day-2-afternoon2.md",
+		"/Users/balintfulop/Library/Containers/co.noteplan.NotePlan3/Data/Library/Application Support/co.noteplan.NotePlan3/Notes/day-3.md",
+		"/Users/balintfulop/Work2/practical-fp-in-ts-may-2021/test/day-3/effect.test.ts",
+		"/Users/balintfulop/Work2/render_client_v3/src/updatePage.ts"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "widgets-banner.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								47,
+								47
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"selector": "- comment - punctuation.separator - punctuation.definition.string.end - constant.character.escape - invalid.illegal - punctuation.section.mapping - punctuation.section.sequence",
+									"server": "LSP-json"
+								}
+							],
+							"lsp_active": true,
+							"lsp_hover_provider_count": 8,
+							"show_definitions": false,
+							"syntax": "Packages/JSON/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/balintfulop/Work/Widgets/banner/src/main.js",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6683,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								602,
+								602
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".\"'/@<",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "LSP-typescript"
+								}
+							],
+							"lsp_active": true,
+							"lsp_hover_provider_count": 9,
+							"show_definitions": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 51.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Command-line":
+	{
+		"height": 126.0
+	},
+	"output.diagnostics":
+	{
+		"height": 211.0
+	},
+	"output.exec":
+	{
+		"height": 237.0
+	},
+	"output.find_results":
+	{
+		"height": 126.0
+	},
+	"output.language servers":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.references":
+	{
+		"height": 242.0
+	},
+	"pinned_build_system": "Build once",
+	"project": "widgets-banner.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mai",
+				"src/main.js"
+			],
+			[
+				"common-ui/tabl",
+				"modules/common-ui/src/components/Table/Table.tsx"
+			],
+			[
+				"",
+				"modules/dashboard/src/modules/reporting/nps/components/Comments/Comments.tsx"
+			],
+			[
+				"nps",
+				"modules/dashboard/src/modules/reporting/nps/components/NPS/NPS.tsx"
+			],
+			[
+				"apicall",
+				"modules/api-client/src/helpers/apiCall.ts"
+			],
+			[
+				"client-c",
+				"data/client-config.json"
+			],
+			[
+				"git",
+				".gitignore"
+			],
+			[
+				"src/ed",
+				"src/editorUI.ts"
+			],
+			[
+				"edit",
+				"src/editorUI.ts"
+			],
+			[
+				"effect",
+				"test/day-3/effect.test.ts"
+			],
+			[
+				"day-1",
+				"src/exercises/day-1/03-gadt.ts"
+			],
+			[
+				"day-2",
+				"src/exercises/day-2/01-effect.ts"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/.config/sublimetext/pulsar.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 305.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Environment"
+			],
+			[
+				"env",
+				"Environment"
+			],
+			[
+				"HTTP",
+				"HttpRequestError"
+			]
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 361.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

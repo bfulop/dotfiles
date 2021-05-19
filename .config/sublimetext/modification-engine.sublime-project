@@ -1,0 +1,11 @@
+{
+	"folders":
+	[
+		{
+			"name": "Modifiation Engine",
+			"path": "/Users/balintfulop/Work/modification-engine",
+			"folder_exclude_patterns": ["es5"]
+
+		}
+	]
+}
