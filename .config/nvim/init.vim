@@ -1,3 +1,8 @@
+set guifont=Iosevka\ Term\ SS09:h13:n
+set guifont=Iosevka\ Term\ SS09:h13:db
+set guifont=Iosevka\ Term\ SS09:h13:b
+set guifont=Iosevka\ Term\ SS09:h13:sb
+set guifont=Iosevka\ Term\ SS09:h13:l
 set linespace=3
 set guioptions-=m "remove menu bar
 set guioptions-=T "remove toolbar
@@ -10,8 +15,8 @@ set smartcase
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
+" set foldmethod=expr
+" set foldexpr=nvim_treesitter#foldexpr()
 set foldlevelstart=8
 set nocompatible
 set inccommand=nosplit
@@ -43,15 +48,11 @@ set shortmess+=c
 set shortmess-=S
 " vim-lsc avoid suppressing error messages from this plugin.
 set shortmess-=F
-
-let g:neovide_cursor_animation_length=0.08
-let g:neovide_cursor_antialiasing=v:true
-let g:neovide_floating_blur=v:true
-let g:neovide_floating_opacity=1.0
-let g:neovide_fullscreen=v:false
-let g:neovide_refresh_rate=75
-let g:neovide_window_floating_blur=v:false
-let g:neovide_window_floating_opacity=1.0
+"
+" let g:neovide_cursor_animation_length=0.08
+" let g:neovide_floating_opacity=1.0
+" let g:neovide_fullscreen=v:false
+" let g:neovide_refresh_rate=75
 
 " let $PATH .= ':/Users/balintfulop/.nodenv/versions/15.5.1/bin/'
 

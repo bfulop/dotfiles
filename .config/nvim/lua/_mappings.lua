@@ -15,8 +15,10 @@ utils.nnoremap(leader..'G', ":lua require'telescope.builtin'.git_files()<cr>")
 utils.vnoremap(leader..'G', ":lua require'telescope.builtin'.git_files()<cr>")
 utils.nnoremap(leader..'b', ":lua require'telescope.builtin'.buffers()<cr>")
 utils.vnoremap(leader..'b', ":lua require'telescope.builtin'.buffers()<cr>")
-utils.nnoremap(leader..'c', ":lua require'telescope.builtin'.commands()<cr>")
-utils.vnoremap(leader..'c', ":lua require'telescope.builtin'.commands()<cr>")
+utils.nnoremap(leader..'o', ":lua require'telescope.builtin'.commands()<cr>")
+utils.vnoremap(leader..'o', ":lua require'telescope.builtin'.commands()<cr>")
+utils.nnoremap(leader..'h', ":lua require'telescope.builtin'.command_history()<cr>")
+utils.vnoremap(leader..'h', ":lua require'telescope.builtin'.command_history()<cr>")
 utils.nnoremap(leader..'v', ":lua require'telescope.builtin'.live_grep()<cr>")
 utils.vnoremap(leader..'v', ":lua require'telescope.builtin'.live_grep()<cr>")
 
@@ -34,6 +36,6 @@ utils.noremap('',leader..'1', ":lua require'telescope.builtin'.builtin()<cr>")
 utils.nnoremap(leader..'lr', ":lua require'telescope.builtin'.lsp_references()<cr>")
 utils.nnoremap(leader..'ld', ":lua require'telescope.builtin'.lsp_document_diagnostics()<cr>")
 
--- NEOSCROLL MAPPINGS
-utils.nnoremap('<C-y>', ":lua require('neoscroll').scroll(-3, false, 12)<cr>")
-utils.nnoremap('<C-e>', ":lua require('neoscroll').scroll(3, false, 12)<cr>")
+-- GONEOVIM
+utils.nnoremap(leader..']', ":GonvimWorkspaceNext<cr>")
+utils.nnoremap(leader..'[', ":GonvimWorkspacePrevious<cr>")
