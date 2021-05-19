@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-autoload -Uz compinit && compinit
+# autoload -Uz compinit && compinit
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/balintfulop/.oh-my-zsh"
@@ -78,7 +78,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm ripgrep osx zsh-autosuggestions dotbare)
+plugins=(ripgrep zsh-autosuggestions dotbare)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,8 +116,8 @@ export PATH
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # disable nodenv, switching to volta
-# export PATH="$HOME/.nodenv/bin:$PATH"
-# eval "$(nodenv init -)"
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
 
 # NEOVIM
 # export PATH="~/install/neovim/nvim-osx64/bin/"
@@ -145,6 +145,15 @@ fi
 
 eval "$(starship init zsh)"
 
-source /Users/balintfulop/.config/broot/launcher/bash/br
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+# source /Users/balintfulop/.config/broot/launcher/bash/br
+# export VOLTA_HOME="$HOME/.volta"
+# export PATH="$VOLTA_HOME/bin:$PATH"
+
+
+# for building goneovim
+# export QT_DIR=/Users/balintfulop/Install/qtinstall
+# export QT_VERSION=5.15.2
+# export QT_API=5.13.0
+
+# Sublime Text
+export EDITOR='subl -w'
