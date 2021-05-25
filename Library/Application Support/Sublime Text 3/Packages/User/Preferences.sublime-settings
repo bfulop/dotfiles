@@ -2,7 +2,7 @@
 	// Sets the colors used within the text area.
 	// The value "auto" will switch between the "light_color_scheme" and
 	// "dark_color_scheme" based on the operating system appearance.
-	"color_scheme": "auto",
+	"color_scheme": "Monokai Pro (Filter Octagon).sublime-color-scheme",
 	// Controls the "color_scheme" when set to "auto"
 	"light_color_scheme": "Packages/Color Scheme - Default/Breakers.sublime-color-scheme",
 	"dark_color_scheme": "Packages/Theme - Monokai Pro/Monokai Pro (Filter Octagon).sublime-color-scheme",
@@ -13,7 +13,7 @@
 		"Vintage",
 		"Vintageous",
 	],
-	"theme": "ayu-light.sublime-theme",
+	"theme": "Monokai Pro (Filter Octagon).sublime-theme",
 	// If enabled, will highlight the gutter for any line with a caret
 	"highlight_line": false,
 	"highlight_gutter": true,
@@ -51,6 +51,8 @@
 		"cache",
 		".github",
 		".snowpack",
+		"_snowpack",
+		"pkg",
 		".svn",
 		".git",
 		".hg",
@@ -83,7 +85,6 @@
 		"*.class",
 		"*.psd",
 		"*.db",
-		"*.sublime-workspace",
 		"Session.vim",
 		"tags",
 		"Dockerfile"

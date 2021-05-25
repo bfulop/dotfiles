@@ -4,7 +4,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 [user]
-	name = balintfulop
-	email = balint.fulop@abtasty.com
+	name = bfulop
+	email = bfulop@mac.com
 [core]
 	excludesfile = /Users/balintfulop/.gitignore_global

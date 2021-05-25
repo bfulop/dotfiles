@@ -13,6 +13,8 @@
 		"LSP-typescript",
 		"NeoVintageous",
 		"Package Control",
+		"QColor",
+		"Sass",
 		"Theme - Monokai Pro",
 	],
 	"install_prereleases": ["NeoVintageous"],
