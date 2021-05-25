@@ -2,7 +2,6 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"LSP-typescript",
 	],
 	"installed_packages":
 	[
@@ -12,11 +11,14 @@
 		"LSP-eslint",
 		"LSP-json",
 		"LSP-typescript",
-		"NeoVintageous",
+		"Origami",
 		"Package Control",
 		"QColor",
 		"Sass",
 		"Theme - Monokai Pro",
 	],
 	"install_prereleases": ["NeoVintageous"],
+	"repositories":
+	[
+	],
 }
