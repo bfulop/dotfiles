@@ -3,8 +3,18 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-[user]
-	name = bfulop
-	email = bfulop@mac.com
+
 [core]
 	excludesfile = /Users/balintfulop/.gitignore_global
+
+[includeIf "gitdir:~/Work/"]
+  path = ~/.work.gitconfig
+
+[includeIf "gitdir:~/Work2/"]
+  path = ~/.personal.gitconfig
+
+[includeIf "gitdir:~/Temp/"]
+  path = ~/.personal.gitconfig
+
+[includeIf "gitdir:~/Install/"]
+  path = ~/.personal.gitconfig

@@ -2,10 +2,23 @@
 {
 	"settings": {
 		"rulesCustomizations": [
-			{"rule": "no-*", "severity": "warn"},
-			{ "rule": "!no-*", "severity": "warn" },
-			{"rule": "semi", "severity": "info"},
-			{"rule": "prettier/prettier", "severity": "info"},
-		]
+			{
+				"rule": "no-*",
+				"severity": "warn"
+			},
+			{
+				"rule": "!no-*",
+				"severity": "warn"
+			},
+			{
+				"rule": "semi",
+				"severity": "info"
+			},
+			{
+				"rule": "prettier/prettier",
+				"severity": "info"
+			},
+		],
+		"codeActionOnSave.enable": false,
 	}
 }

@@ -104,6 +104,9 @@ export EDITOR=$HOME/Downloads/nvim-osx64/bin/nvim
 path+=('/Users/balintfulop/.gem/ruby/2.7.0/bin')
 export PATH
 
+# fnm Node Version Manager
+eval "$(fnm env)"
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -116,8 +119,8 @@ export PATH
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # disable nodenv, switching to volta
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
+# export PATH="$HOME/.nodenv/bin:$PATH"
+# eval "$(nodenv init -)"
 
 # NEOVIM
 # export PATH="~/install/neovim/nvim-osx64/bin/"
@@ -137,9 +140,7 @@ alias ls="exa -lh"
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+eval "$(pyenv init -)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -157,3 +158,4 @@ eval "$(starship init zsh)"
 
 # Sublime Text
 export EDITOR='subl -w'
+

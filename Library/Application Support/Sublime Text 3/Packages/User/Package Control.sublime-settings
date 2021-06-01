@@ -7,6 +7,8 @@
 	[
 		"A File Icon",
 		"ayu",
+		"EditorConfig",
+		"JsPrettier",
 		"LSP",
 		"LSP-eslint",
 		"LSP-json",
