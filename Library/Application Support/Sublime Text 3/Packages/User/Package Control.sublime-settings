@@ -6,9 +6,11 @@
 	"installed_packages":
 	[
 		"A File Icon",
+		"ApplySyntax",
 		"ayu",
 		"EditorConfig",
 		"JsPrettier",
+		"Kirikae",
 		"LSP",
 		"LSP-eslint",
 		"LSP-json",

@@ -1,7 +1,6 @@
 " Type :help nv for help.
 " let mapleader=,
 nnoremap <leader>v :GotoSymbolInProject<CR>
-nnoremap <leader>f :ShowOverlay overlay=goto text=@<CR>
 nnoremap <leader>d :Neovintageous action=toggle_side_bar<CR>
 
 

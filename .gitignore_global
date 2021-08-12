@@ -5,3 +5,5 @@ web_modules
 *.pug.js
 *.css.js
 Session.vim
+**.sublime-workspace
+**.sublime-project

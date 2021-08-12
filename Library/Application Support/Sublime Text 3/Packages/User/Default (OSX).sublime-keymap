@@ -98,5 +98,6 @@
 				"operand": "sidebar_tree"
 			}
 		]
-	}
+	},
+	{ "keys": ["\\", "f"], "command": "extended_switcher", "args": {"list_mode": "window"} },
 ]

@@ -9,14 +9,12 @@
 	"font_face": "Iosevka Term SS09",
 	"font_size": 13,
 	"ignored_packages": [
-		"EditorConfig",
-		"JsPrettier",
 		"Six",
 		"Vintage",
 		"Vintageous",
 	],
 	"themed_title_bar": true,
-	"theme": "Monokai Pro (Filter Octagon).sublime-theme",
+	"theme": "Monokai Pro (Filter Ristretto).sublime-theme",
 	// If enabled, will highlight the gutter for any line with a caret
 	"highlight_line": false,
 	"highlight_gutter": true,
@@ -34,7 +32,7 @@
 	"line_padding_bottom": 1,
 	"scroll_past_end": 0.5,
 	"scroll_context_lines": 1,
-	// Valid values are "system", "enabled" and "disabled"
+	// Valid values are "system", "enabled" and adisabled"
 	"overlay_scroll_bars": "enabled",
 	"indent_guide_options": [
 		"draw_active_single"
@@ -112,9 +110,6 @@
 	// source code, and otherwise enabled.
 	"scroll_speed": 0.2,
 	"word_wrap": "auto",
-	// Set to a value other than 0 to force wrapping at that column rather than
-	// the window width. See "wrap_width_style" for extra options.
-	"wrap_width": 80,
 	// Controls how the "wrap_width" setting is applied. The following options
 	// are available:
 	// - "constant": Always wrap at exactly the wrap width.

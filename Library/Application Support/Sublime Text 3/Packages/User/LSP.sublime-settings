@@ -16,16 +16,16 @@
   // See also: "diagnostics_delay_ms".
   "diagnostics_additional_delay_auto_complete_ms": 2000,
   "lsp_format_on_save": false,
-  "show_diagnostics_severity_level": 2,
+  "show_diagnostics_severity_level": 4,
   "document_highlight_style": "fill",
   "diagnostics_highlight_style": "stippled",
   "show_code_actions": "bulb",
   "clients": {
     "LSP-typescript": {
-      "enabled": false,
+      "enabled": true,
     },
     "LSP-eslint": {
-      "enabled": false
+      "enabled": true
     },
   },
 }
