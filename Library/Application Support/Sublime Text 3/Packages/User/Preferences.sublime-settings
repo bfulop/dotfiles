@@ -2,19 +2,20 @@
 	// Sets the colors used within the text area.
 	// The value "auto" will switch between the "light_color_scheme" and
 	// "dark_color_scheme" based on the operating system appearance.
-	"color_scheme": "auto",
+	"color_scheme": "Breakers.sublime-color-scheme",
 	// Controls the "color_scheme" when set to "auto"
 	"light_color_scheme": "Packages/Color Scheme - Default/Breakers.sublime-color-scheme",
 	"dark_color_scheme": "Packages/Theme - Monokai Pro/Monokai Pro (Filter Octagon).sublime-color-scheme",
 	"font_face": "Iosevka Term SS09",
 	"font_size": 13,
 	"ignored_packages": [
+		"ApplySyntax",
 		"Six",
 		"Vintage",
 		"Vintageous",
 	],
 	"themed_title_bar": true,
-	"theme": "Monokai Pro (Filter Ristretto).sublime-theme",
+	"theme": "ayu-light.sublime-theme",
 	// If enabled, will highlight the gutter for any line with a caret
 	"highlight_line": false,
 	"highlight_gutter": true,
@@ -108,7 +109,7 @@
 	// Disables horizontal scrolling if enabled.
 	// May be set to true, false, or "auto", where it will be disabled for
 	// source code, and otherwise enabled.
-	"scroll_speed": 0.2,
+	"scroll_speed": 0.08,
 	"word_wrap": "auto",
 	// Controls how the "wrap_width" setting is applied. The following options
 	// are available:
@@ -129,9 +130,14 @@
 		"<C-down>": false,
 		"<C-up>": false,
 		"<K>": false,
+		"<Alt-Q>": false,
 	},
 	"vintageous_use_ctrl_keys": true,
 	"vintageous_use_super_keys": false,
 	"dark_theme": "Monokai Pro (Filter Spectrum).sublime-theme",
 	"light_theme": "Default.sublime-theme",
+	"added_words":
+	[
+		"\n    "
+	],
 }

@@ -20,11 +20,27 @@
 		//    diagnostics_delay_ms + diagnostics_additional_delay_auto_complete_ms
 		//
 		// See also: "diagnostics_delay_ms".
-		"diagnostics_additional_delay_auto_complete_ms": 2000,
-		"lsp_format_on_save": false,
-		"show_diagnostics_severity_level": 4,
+		"diagnostics_additional_delay_auto_complete_ms": 6000,
+		"lsp_format_on_save": true,
+		"show_diagnostics_severity_level": 2,
 		"document_highlight_style": "fill",
 		"diagnostics_highlight_style": "stippled",
 		"show_code_actions": "bulb",
+		// Javascript inlay hints options.
+		"javascript.inlayHints.includeInlayEnumMemberValueHints": false,
+		"javascript.inlayHints.includeInlayFunctionLikeReturnTypeHints": false,
+		"javascript.inlayHints.includeInlayFunctionParameterTypeHints": false,
+		"javascript.inlayHints.includeInlayParameterNameHints": "none",
+		"javascript.inlayHints.includeInlayParameterNameHintsWhenArgumentMatchesName": false,
+		"javascript.inlayHints.includeInlayPropertyDeclarationTypeHints": false,
+		"javascript.inlayHints.includeInlayVariableTypeHints": false,
+		// Typescript inlay hints options.
+		"typescript.inlayHints.includeInlayEnumMemberValueHints": false,
+		"typescript.inlayHints.includeInlayFunctionLikeReturnTypeHints": false,
+		"typescript.inlayHints.includeInlayFunctionParameterTypeHints": false,
+		"typescript.inlayHints.includeInlayParameterNameHints": "none",
+		"typescript.inlayHints.includeInlayParameterNameHintsWhenArgumentMatchesName": false,
+		"typescript.inlayHints.includeInlayPropertyDeclarationTypeHints": false,
+		"typescript.inlayHints.includeInlayVariableTypeHints": false,
 	}
 }

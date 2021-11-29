@@ -4,11 +4,11 @@
 		"rulesCustomizations": [
 			{
 				"rule": "no-*",
-				"severity": "warn"
+				"severity": "downgrade"
 			},
 			{
-				"rule": "!no-*",
-				"severity": "warn"
+				"rule": "spaced-*",
+				"severity": "downgrade"
 			},
 			{
 				"rule": "semi",
@@ -19,6 +19,5 @@
 				"severity": "info"
 			},
 		],
-		"codeActionOnSave.enable": false,
 	}
 }

@@ -8,8 +8,8 @@
 		"red3": "#DC7786"
 	},
 	"globals": {
-    "caret": "var(red3)",
-    "block_caret": "color(var(red3) a(0.4))",
+		"caret": "var(red3)",
+		"block_caret": "color(var(red3) a(0.4))",
 		"brackets_options": "foreground bold underline",
 		"brackets_foreground": "var(red2)",
 		"bracket_contents_options": "foreground underline",
@@ -20,7 +20,7 @@
 		{
 			"name": "LSP Warning",
 			"scope": "markup.warning.lsp",
-			"foreground": "var(white2)"
+			"foreground": "var(white2)",
 		},
 		{
 			"name": "String",

@@ -8,7 +8,9 @@
 		"A File Icon",
 		"ApplySyntax",
 		"ayu",
+		"DocBlockr 2021 (DoxyDoxygen powered)",
 		"EditorConfig",
+		"JSCustom",
 		"JsPrettier",
 		"Kirikae",
 		"LSP",
@@ -20,6 +22,7 @@
 		"QColor",
 		"Sass",
 		"Theme - Monokai Pro",
+		"View Bookmarks",
 	],
 	"install_prereleases": ["NeoVintageous"],
 	"repositories":

@@ -14,11 +14,16 @@
   //    diagnostics_delay_ms + diagnostics_additional_delay_auto_complete_ms
   //
   // See also: "diagnostics_delay_ms".
-  "diagnostics_additional_delay_auto_complete_ms": 2000,
-  "lsp_format_on_save": false,
+  "diagnostics_additional_delay_auto_complete_ms": 8000,
+  "lsp_format_on_save": true,
   "show_diagnostics_severity_level": 4,
-  "document_highlight_style": "fill",
-  "diagnostics_highlight_style": "stippled",
+  "show_multiline_diagnostics_highlights": false,
+  "diagnostics_highlight_style": {
+    "error": "squiggly",
+    "warning": "stippled",
+    "info": "",
+    "hint": ""
+  },
   "show_code_actions": "bulb",
   "clients": {
     "LSP-typescript": {
@@ -27,5 +32,15 @@
     "LSP-eslint": {
       "enabled": true
     },
+    "LSP_json": {
+      "enabled": true
+    }
   },
+  // Show code lens:
+  // "annotation" - show an annotation on the right when code actions are available
+  // "phantom" - show a phantom on the top when code actions are available
+  "show_code_lens": "phantom",
+  // Gutter marker for code diagnostics.
+  // Valid values are "dot", "circle", "bookmark", "sign" or ""
+  "diagnostics_gutter_marker": "sign",
 }
