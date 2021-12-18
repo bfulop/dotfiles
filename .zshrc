@@ -10,7 +10,7 @@ export ZSH="/Users/balintfulop/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="amuse"
+# ZSH_THEME="amuse"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -135,7 +135,7 @@ export DOTBARE_DIFF_PAGER="delta --diff-so-fancy --line-numbers"
 export DOTBARE_FZF_DEFAULT_OPTS="--preview-window=right:75%"
 
 # GONEOVIM
-export PATH=$PATH:/Applications/goneovim.app/Contents/MacOS
+# export PATH=$PATH:/Applications/goneovim.app/Contents/MacOS
 
 alias ls="exa -lh"
 
@@ -146,7 +146,7 @@ eval "$(pyenv init -)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval "$(starship init zsh)"
+# eval "$(tartarship init zsh)"
 
 # source /Users/balintfulop/.config/broot/launcher/bash/br
 # export VOLTA_HOME="$HOME/.volta"

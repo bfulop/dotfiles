@@ -132,7 +132,7 @@
 						]
 					},
 					"GAAAABQAAAAAAAAAFQAAAAAAAAAAAAAAFQAAAAAAAAAYAAAAAAAAAAAAAAAYAAAAAAAAABoAAAAAAAAAAAAAABkAAAAAAAAAGgAAAAAAAAAAAAAAGgAAAAAAAAAbAAAAAAAAAAAAAAAbAAAAAAAAABwAAAAAAAAAAAAAABwAAAAAAAAAHQAAAAAAAAAAAAAAHgAAAAAAAAAfAAAAAAAAAAAAAAAfAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAIgAAAAAAAAAAAAAAIQAAAAAAAAAiAAAAAAAAAAAAAAAiAAAAAAAAACMAAAAAAAAAAAAAACMAAAAAAAAAJAAAAAAAAAAAAAAAJAAAAAAAAAAlAAAAAAAAAAAAAAAlAAAAAAAAACYAAAAAAAAAAAAAACYAAAAAAAAAJwAAAAAAAAAAAAAAJwAAAAAAAAAoAAAAAAAAAAAAAAAoAAAAAAAAACkAAAAAAAAAAAAAACkAAAAAAAAAKgAAAAAAAAAAAAAAKgAAAAAAAAArAAAAAAAAAAAAAAArAAAAAAAAACwAAAAAAAAAAAAAACwAAAAAAAAALQAAAAAAAAAAAAAALQAAAAAAAAAuAAAAAAAAAAAAAAAvAAAAAAAAADAAAAAAAAAAAAAAAA",
-					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAABEAAAAAAAAAEQAAAAAAAAAAAAAAAADwvw"
+					"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAEQAAAAAAAAARAAAAAAAAAAAAAAAAAPC/"
 				]
 			]
 		},
@@ -146,6 +146,26 @@
 			"undo_stack":
 			[
 			]
+		},
+		{
+			"file": "/Users/balintfulop/Work/Widgets/banner/src/forms/common/style.js",
+			"settings":
+			{
+				"buffer_size": 8199,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+			]
+		},
+		{
+			"file": "/Users/balintfulop/Work/Widgets/banner/src/forms/common/layout.js",
+			"settings":
+			{
+				"buffer_size": 625,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -304,7 +324,12 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/balintfulop/Work/Widgets/banner"
+		"/Users/balintfulop/Work/Widgets/banner",
+		"/Users/balintfulop/Work/Widgets/banner/src",
+		"/Users/balintfulop/Work/Widgets/banner/src/forms",
+		"/Users/balintfulop/Work/Widgets/banner/src/forms/common",
+		"/Users/balintfulop/Work/Widgets/banner/src/modules",
+		"/Users/balintfulop/Work/Widgets/banner/src/triggers"
 	],
 	"file_history":
 	[
@@ -325,13 +350,14 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 28.0
 	},
 	"find_in_files":
 	{
-		"height": 101.0,
+		"height": 132.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -339,6 +365,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"fontName"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -379,6 +406,7 @@
 						],
 						"settings":
 						{
+							"apply_syntax_touched": true,
 							"auto_complete_triggers":
 							[
 								{
@@ -395,7 +423,8 @@
 								}
 							],
 							"lsp_active": true,
-							"lsp_hover_provider_count": 8,
+							"lsp_hover_provider_count": 9,
+							"lsp_uri": "file:///Users/balintfulop/.config/sublimetext/widgets-banner.sublime-project",
 							"show_definitions": false,
 							"syntax": "Packages/JSON/JSON.sublime-syntax",
 							"tab_size": 2,
@@ -405,14 +434,13 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"stack_multiselect": false,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
 					"file": "/Users/balintfulop/Work/Widgets/banner/src/main.js",
-					"selected": true,
 					"semi_transient": false,
 					"settings":
 					{
@@ -423,12 +451,13 @@
 						"selection":
 						[
 							[
-								602,
-								602
+								6196,
+								6196
 							]
 						],
 						"settings":
 						{
+							"apply_syntax_touched": true,
 							"auto_complete_triggers":
 							[
 								{
@@ -445,12 +474,127 @@
 									"server": "LSP-typescript"
 								}
 							],
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
 							"lsp_active": true,
-							"lsp_hover_provider_count": 9,
+							"lsp_hover_provider_count": 10,
+							"lsp_uri": "file:///Users/balintfulop/Work/Widgets/banner/src/main.js",
 							"show_definitions": false,
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3290.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/balintfulop/Work/Widgets/banner/src/forms/common/style.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8199,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7303,
+								7303
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".\"'/@<",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "LSP-typescript"
+								}
+							],
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"lsp_active": true,
+							"lsp_hover_provider_count": 1,
+							"lsp_uri": "file:///Users/balintfulop/Work/Widgets/banner/src/forms/common/style.js",
+							"show_definitions": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5767.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/balintfulop/Work/Widgets/banner/src/forms/common/layout.js",
+					"selected": true,
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 625,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".\"'/@<",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "LSP-typescript"
+								}
+							],
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"lsp_active": true,
+							"lsp_hover_provider_count": 1,
+							"lsp_uri": "file:///Users/balintfulop/Work/Widgets/banner/src/forms/common/layout.js",
+							"show_definitions": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -465,11 +609,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 28.0
 	},
 	"input":
 	{
-		"height": 51.0
+		"height": 52.0
 	},
 	"layout":
 	{
@@ -526,7 +670,7 @@
 	"project": "widgets-banner.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -623,11 +767,14 @@
 	"selected_group": 0,
 	"settings":
 	{
+		"_vintageous_last_buffer_search": "text",
+		"_vintageous_last_buffer_search_command": "nv_vi_slash",
+		"_vintageous_reset_during_init": true
 	},
 	"show_minimap": false,
 	"show_open_files": true,
-	"show_tabs": true,
-	"side_bar_visible": false,
+	"show_tabs": false,
+	"side_bar_visible": true,
 	"side_bar_width": 361.0,
 	"status_bar_visible": true,
 	"template_settings":

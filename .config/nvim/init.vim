@@ -49,13 +49,6 @@ set shortmess-=S
 " vim-lsc avoid suppressing error messages from this plugin.
 set shortmess-=F
 "
-" let g:neovide_cursor_animation_length=0.08
-" let g:neovide_floating_opacity=1.0
-" let g:neovide_fullscreen=v:false
-" let g:neovide_refresh_rate=75
-
-" let $PATH .= ':/Users/balintfulop/.nodenv/versions/15.5.1/bin/'
-
 call plug#begin('~/config/.nvim/plugged')
 if !exists('g:vscode')
   Plug 'neovim/nvim-lspconfig'
@@ -65,13 +58,9 @@ if !exists('g:vscode')
   Plug 'nvim-treesitter/nvim-treesitter-refactor'
   Plug 'nvim-treesitter/nvim-treesitter-textobjects'
   Plug 'nvim-treesitter/completion-treesitter'
-  Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
-  Plug 'lambdalisue/fern.vim'
-  Plug 'mhartington/formatter.nvim'
-  Plug 'lambdalisue/fern-git-status.vim'
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-lua/telescope.nvim'
+  " Plug 'nvim-lua/telescope.nvim'
   " Plug 'dstein64/nvim-scrollview', { 'branch': 'main' }
   Plug 'editorconfig/editorconfig-vim'
   Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
@@ -152,33 +141,6 @@ if !exists('g:vscode')
 if has('nvim')
   lua require("init")
 endif
-lua <<EOF
-require('formatter').setup({
-  logging = false,
-  filetype = {
-    javascript = {
-        -- prettier
-       function()
-          return {
-            exe = "prettier",
-            args = {"--stdin-filepath", vim.api.nvim_buf_get_name(0), '--single-quote'},
-            stdin = true
-          }
-        end
-    },
-    typescript = {
-        -- prettier
-       function()
-          return {
-            exe = "prettier",
-            args = {"--stdin-filepath", vim.api.nvim_buf_get_name(0), '--single-quote'},
-            stdin = true
-          }
-        end
-    },
-  }
-})
-EOF
 endif
 
 nnoremap <silent> <leader>f :Format<CR>
@@ -189,8 +151,8 @@ if !exists('g:vscode')
 " nnoremap ar <cmd>lua require'telescope.builtin'.lsp_document_symbols{ shorten_path = true }<CR>
 " nnoremap <silent> gw <cmd>lua require'telescope.builtin'.lsp_workspace_symbols{}<CR>
 " nnoremap <silent> gr <cmd>lua require'telescope.builtin'.lsp_references{ shorten_path = true }<CR>
-nnoremap <Leader>q <cmd>lua require'telescope.builtin'.quickfix{}<CR>
-nnoremap <Leader>ff <cmd>lua require'telescope.builtin'.help_tags{}<CR>
+" nnoremap <Leader>q <cmd>lua require'telescope.builtin'.quickfix{}<CR>
+" nnoremap <Leader>ff <cmd>lua require'telescope.builtin'.help_tags{}<CR>
 
 " Window action remaps
 nnoremap <C-J> <C-W><C-J>

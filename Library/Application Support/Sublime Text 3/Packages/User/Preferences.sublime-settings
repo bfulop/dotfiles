@@ -100,7 +100,6 @@
 		"package-lock.json",
 		"yarn-lock.json"
 	],
-	"neovintageous_build_version": 11100,
 	// Indicate modified lines in the gutter
 	// - true: Enables modified line indicators on all files
 	// - "auto": Enables modified line indicators on tracked files within Git
@@ -136,8 +135,9 @@
 	"vintageous_use_super_keys": false,
 	"dark_theme": "Monokai Pro (Filter Spectrum).sublime-theme",
 	"light_theme": "Default.sublime-theme",
-	"added_words":
-	[
+	"highlightedyank_style": "outline",
+	"added_words": [
 		"\n    "
 	],
+	"neovintageous_build_version": 11100,
 }
